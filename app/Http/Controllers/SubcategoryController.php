@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+use App\Subcategory;
 use Illuminate\Http\Request;
 
 class SubcategoryController extends Controller
@@ -13,7 +15,13 @@ class SubcategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::all();
+        
+        //dd($categories);
+    
+        $subcategories = Subcategory::all();
+        return view('subcategory.index',compact('subcategories','categories'));
+
     }
 
     /**
@@ -22,8 +30,9 @@ class SubcategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    {   
+       $categories = Category::all();
+        return view('subcategory.create',compact('categories'));
     }
 
     /**
@@ -34,51 +43,76 @@ class SubcategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       // dd($request);
+        $request->validate([
+            'name'=>'required|min:2'
+            ]);
+
+        $subcategories = new Subcategory();
+        $subcategories->name = $request->name;
+        $subcategories->category_id = $request->category;
+
+        $subcategories->save();
+
+        return redirect()->route('subcategory.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Subcategory  $subcategory
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function show(Subcategory $subcategory)
+    {   
+         $categories = Category::all();
+        // dd($categories);
+         return view('subcategory.show',compact('subcategory','categories'));  
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Subcategory  $subcategory
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
+    public function edit(Subcategory $subcategory)
+    {   
+        $categories = Category::all();
+        return view('subcategory.edit',compact('subcategory','categories'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Subcategory  $subcategory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Subcategory $subcategory)
     {
-        //
+         $request->validate([
+            'name'=>'required|min:2'
+            ]);
+
+        
+        $subcategories->name = $request->name;
+        $subcategories->category_id = $request->category;
+        
+
+        $subcategories->save();
+
+        return redirect()->route('subcategory.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Subcategory  $subcategory
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Subcategory $subcategory)
     {
-        //
-    }
+        $subcategory->delete();
+        return redirect()->route('subcategory.index');    }
 }

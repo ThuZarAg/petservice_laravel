@@ -108,7 +108,7 @@
          -->
         <li><a class="app-menu__item {{ Request::is('category*') ? 'active' : '' }}" href="{{route('category.index')}}"><i class="app-menu__icon icofont-tag"></i><span class="app-menu__label">Categories</span></a></li>
 
-        <li><a class="app-menu__item {{ Request::is('subcategory*') ? 'active' : '' }}" href=""><i class="app-menu__icon icofont-tags"></i><span class="app-menu__label">Subcategories</span></a></li>
+        <li><a class="app-menu__item {{ Request::is('subcategory*') ? 'active' : '' }}" href="{{route('subcategory.index')}}"><i class="app-menu__icon icofont-tags"></i><span class="app-menu__label">Subcategories</span></a></li>
 
         <li><a class="app-menu__item {{ Request::is('item*') ? 'active' : '' }}" href="{{route('item.index')}}"><i class="app-menu__icon icofont-package"></i><span class="app-menu__label">Items</span></a></li>
 
