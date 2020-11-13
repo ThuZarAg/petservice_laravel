@@ -18,6 +18,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{-- Fontawesome --}}
+    <link rel="stylesheet" type="text/css" href="{{asset('fontawesome/css/all.min.css')}}">
+    <!-- iconfont CSS -->
+    <link rel="stylesheet" type="text/css" href="{{asset('icon/icofont/icofont.min.css')}}">
+    <!-- Boxicon CSS -->
+    <link rel="stylesheet" type="text/css" href="{{asset('icon/boxicons-master/css/boxicons.min.css')}}">
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('backend_asset/css/main.css')}}">
     <!-- Font-icon css-->
@@ -100,18 +106,20 @@
       <ul class="app-menu">
         <!-- <li><a class="app-menu__item" href="dashboard.html"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
          -->
-        <li><a class="app-menu__item {{ Request::is('category*') ? 'active' : '' }}" href="{{route('category.index')}}"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Categories</span></a></li>
+        <li><a class="app-menu__item {{ Request::is('category*') ? 'active' : '' }}" href="{{route('category.index')}}"><i class="app-menu__icon icofont-tag"></i><span class="app-menu__label">Categories</span></a></li>
 
-        <li><a class="app-menu__item {{ Request::is('subcategory*') ? 'active' : '' }}" href=""><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Subcategories</span></a></li>
+        <li><a class="app-menu__item {{ Request::is('subcategory*') ? 'active' : '' }}" href=""><i class="app-menu__icon icofont-tags"></i><span class="app-menu__label">Subcategories</span></a></li>
 
-        <li><a class="app-menu__item {{ Request::is('item*') ? 'active' : '' }}" href=""><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Items</span></a></li>
+        <li><a class="app-menu__item {{ Request::is('item*') ? 'active' : '' }}" href="{{route('item.index')}}"><i class="app-menu__icon icofont-package"></i><span class="app-menu__label">Items</span></a></li>
 
-        <li><a class="app-menu__item {{ Request::is('service*') ? 'active' : '' }}" href=""><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Service</span></a></li>
+        <li><a class="app-menu__item {{ Request::is('service*') ? 'active' : '' }}" href=""><img src="https://img.icons8.com/nolan/22/service.png"/> <span class="app-menu__label">Service</span></a></li>
 
-        <li><a class="app-menu__item {{ Request::is('booking*') ? 'active' : '' }}" href=""><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Booking</span></a></li>
-        <li><a class="app-menu__item {{ Request::is('booking*') ? 'active' : '' }}" href=""><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Order</span></a></li>
+        <li><a class="app-menu__item {{ Request::is('booking*') ? 'active' : '' }}" href=""><img src="https://img.icons8.com/ultraviolet/22/000000/booking.png"/> <span class="app-menu__label">Booking</span></a></li>
+        <li><a class="app-menu__item {{ Request::is('booking*') ? 'active' : '' }}" href=""><img src="https://img.icons8.com/nolan/22/purchase-order.png"/><span class="app-menu__label">Order</span></a></li>
        
       </ul>
+
+
     </aside>
     
     @yield('content')

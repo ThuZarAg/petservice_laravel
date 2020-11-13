@@ -16,7 +16,7 @@
 		<div class="col-md-12">
 			<div class="tile">
 				<h2>Brand Edit Form</h2>
-				<form action="{{route('items.update',$item->id)}}" method="post" enctype="multipart/form-data">
+				<form action="{{route('item.update',$item->id)}}" method="post" enctype="multipart/form-data">
 					@csrf
 					@method('PUT')
 					<div class="form-group row {{ $errors->has('codeno') ? 'has-error' : '' }}">
@@ -61,19 +61,7 @@
 							<span class="text-danger">{{ $errors->first('description') }}</span>
 						</div>
 					</div>
-					<div class="form-group row {{ $errors->has('brand') ? 'has-error' : '' }}">
-						<label for="inputBrand" class="col-sm-2 col-form-label">Brand</label>
-						<div class="col-sm-5">
-							<select class="form-control form-control-md" id="inputBrand" name="brand">
-								<optgroup label="Choose Brand">
-									@foreach($brands as $brand)
-									<option value="{{$brand->id}}" @if($brand->id == $item->brand_id){{'selected'}} @endif>{{$brand->name}}</option>
-									@endforeach	
-								</optgroup>
-							</select>
-							<span class="text-danger">{{ $errors->first('brand') }}</span>
-						</div>
-					</div>
+					
 					<div class="form-group row {{ $errors->has('subcategory') ? 'has-error' : '' }}">
 						<label for="inputSubcategory" class="col-sm-2 col-form-label">Subcategory</label>
 						<div class="col-sm-5">
