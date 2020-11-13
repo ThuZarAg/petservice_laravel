@@ -102,13 +102,13 @@
          -->
         <li><a class="app-menu__item {{ Request::is('category*') ? 'active' : '' }}" href="{{route('category.index')}}"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Categories</span></a></li>
 
-        <li><a class="app-menu__item {{ Request::is('subcategory*') ? 'active' : '' }}" href="{{route('subcategory.index')}}"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Subcategories</span></a></li>
+        <li><a class="app-menu__item {{ Request::is('subcategory*') ? 'active' : '' }}" href=""><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Subcategories</span></a></li>
 
-        <li><a class="app-menu__item {{ Request::is('item*') ? 'active' : '' }}" href="{{route('item.index')}}"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Items</span></a></li>
+        <li><a class="app-menu__item {{ Request::is('item*') ? 'active' : '' }}" href=""><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Items</span></a></li>
 
-        <li><a class="app-menu__item {{ Request::is('service*') ? 'active' : '' }}" href="{{route('service.index')}}"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Service</span></a></li>
+        <li><a class="app-menu__item {{ Request::is('service*') ? 'active' : '' }}" href=""><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Service</span></a></li>
 
-        <li><a class="app-menu__item {{ Request::is('booking*') ? 'active' : '' }}" href="{{route('booking.index')}}"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Booking</span></a></li>
+        <li><a class="app-menu__item {{ Request::is('booking*') ? 'active' : '' }}" href=""><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Booking</span></a></li>
        
       </ul>
     </aside>
