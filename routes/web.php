@@ -13,6 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+//CRUD(Backend)
+Route::resource('category','CategoryController');
+
+
+//Frontend
+Route::get('/', 'FrontendController@home')->name('mainpage');
+
+Route::get('service', 'FrontendController@service')->name('servicepage');
+
+Route::get('shop', 'FrontendController@shop')->name('shoppage');
+
+Route::get('contact', 'FrontendController@contact')->name('contactpage');
+
+Route::get('about', 'FrontendController@about')->name('aboutpage');
+
