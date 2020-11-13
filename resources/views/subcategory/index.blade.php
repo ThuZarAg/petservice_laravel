@@ -5,12 +5,12 @@
   <main class="app-content">
     <div class="app-title">
       <div>
-        <h1><i class="fa fa-dashboard"></i> Blank Page</h1>
-        <p>Start a beautiful journey here</p>
+        <h1><i class="fa fa-dashboard"></i> Mr.Pet</h1>
+        <p>Bundles of Love, wrapped in fur.</p>
       </div>
       <ul class="app-breadcrumb breadcrumb">
         <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-        <li class="breadcrumb-item"><a href="#">Blank Page</a></li>
+        <li class="breadcrumb-item"><a href="{{route('subcategory.index')}}">Subcategory List</a></li>
       </ul>
     </div>
     <div class="row">
