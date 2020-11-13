@@ -15,7 +15,21 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
+            $table->string('codeno');
+            $table->string('name');
+            $table->text('photo');
+            $table->integer('price');
+            $table->integer('discount'); 
+            $table->text('description');
+            
+            $table->unsignedBigInteger('subcategory_id');
+                          
+            $table->foreign('subcategory_id')
+                  ->references('id')->on('subcategories')
+                  ->onDelete('cascade'); 
+          
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

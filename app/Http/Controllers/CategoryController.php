@@ -37,7 +37,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "name" => "required|min:5",
+            "name" => "required",
             "photo" => "required|mimes:jpeg,bmp,png", // a.jpg
         ]);
 
@@ -47,7 +47,7 @@ class CategoryController extends Controller
             $fileName = time().'_'.$request->photo->getClientOriginalName();
 
             // brandimg/624872374523_a.jpg
-            $filePath = $request->file('photo')->storeAs('category', $fileName, 'public');
+            $filePath = $request->file('photo')->storeAs('categoryimg', $fileName, 'public');
 
             $path = '/storage/'.$filePath;
         }
@@ -100,7 +100,7 @@ class CategoryController extends Controller
 
         // Validation
         $request->validate([
-            "name" => "required|min:5",
+            "name" => "required",
             "photo" => "sometimes|required|mimes:jpeg,bmp,png", // a.jpg
             "oldphoto" => "required"
         ]);
