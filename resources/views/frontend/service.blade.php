@@ -98,7 +98,7 @@
           <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/service-details-1.jpg" alt="...">
+                <img src="{{asset('frontend_asset/images/services/dogjog.jpg')}}" alt="...">
               </div>
               <div class="card-body">
                 <h5 class="card-title"><a href="#">Our Mission</a></h5>
