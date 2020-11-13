@@ -18,7 +18,7 @@
         <div class="tile">
           <h2 class="d-inline-block">Item List</h2>
           <a href="{{route('item.create')}}" class="btn btn-info float-right">Add New</a>
-          <table class="table table-border">
+          <table class="table table-bordered dataTable">
 			<thead>
 				<tr>
 					<th>No</th>
@@ -39,11 +39,11 @@
 					<td>{{$item->name}}</td>
 					<td>{{$item->price}}</td>
 					<td>
-						<a href="{{route('items.edit',$item->id)}}" class="btn btn-warning">Edit</i></a>
-						<a href="{{route('items.show',$item->id)}}"
+						<a href="{{route('item.edit',$item->id)}}" class="btn btn-warning">Edit</i></a>
+						<a href="{{route('item.show',$item->id)}}"
 							class="btn btn-primary">Detail</span>
 						</a>
-						<form method="post" action="{{route('items.destroy',$item->id)}}" class="d-inline-block" onsubmit="return confirm('Are you sure to delete?')">
+						<form method="post" action="{{route('item.destroy',$item->id)}}" class="d-inline-block" onsubmit="return confirm('Are you sure to delete?')">
 							@csrf
 							@method('DELETE')
 							<button type="submit" name="btn-submit" class="btn btn-danger btn-delete">Delete</button>

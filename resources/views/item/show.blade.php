@@ -2,14 +2,13 @@
 
 @section('content')
   <main class="app-content">
-    <div class="app-title">
-      <div>
-        <h1><i class="fa fa-dashboard"></i> Blank Page</h1>
-        <p>Start a beautiful journey here</p>
-      </div>
+      <div class="app-title">
+        <div>
+            <h1> <i class="icofont-list"></i> Item </h1>
+        </div>
       <ul class="app-breadcrumb breadcrumb">
         <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-        <li class="breadcrumb-item"><a href="#">Blank Page</a></li>
+        <li class="breadcrumb-item"><a href="{{route('item.index')}}">Item List</a></li>
       </ul>
     </div>
    <div class="container-fluid animated animatedFadeInUp fadeInUp">

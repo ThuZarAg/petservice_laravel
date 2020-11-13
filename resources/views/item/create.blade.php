@@ -17,13 +17,13 @@
           <h2>Item Create Form</h2>
           <form action="{{route('item.store')}}" method="post" enctype="multipart/form-data">
 			@csrf
-			<div class="form-group row {{ $errors->has('codeno') ? 'has-error' : '' }}">
+			{{-- <div class="form-group row {{ $errors->has('codeno') ? 'has-error' : '' }}">
 				<label for="inputCodeno" class="col-sm-2 col-form-label">Code No</label>
 				<div class="col-sm-5">
 					<input type="text" class="form-control" id="inputCodeno" name="codeno">
 					<span class="text-danger">{{ $errors->first('codeno') }}</span>
 				</div>
-			</div>
+			</div> --}}
 			<div class="form-group row {{ $errors->has('name') ? 'has-error' : '' }}">
 				<label for="inputName" class="col-sm-2 col-form-label">Name</label>
 				<div class="col-sm-5">

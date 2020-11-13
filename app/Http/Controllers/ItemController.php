@@ -41,20 +41,20 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request); // print output
+        //dd($request); // print output
 
         // Validation
         $request->validate([
-            'codeno' => 'required',
+            
             'name' => 'required',
             'photo' => 'required',
             'price' => 'required',
-            'discount' => 'required',
+            'discount' => 'sometimes|required',
             'description' => 'required',
             'subcategory' => 'required',
 
         ]);
-
+            //dd($request);
        // if include file, upload
         if($request->file()) {
             // 624872374523_a.jpg
@@ -66,10 +66,12 @@ class ItemController extends Controller
             $path = '/storage/'.$filePath;
         }
 
+        //codeno
+        $codeno = "FD".mt_rand(100000,900000);
 
         // Store Data
         $item = new Item;
-        $item->codeno = $request->codeno;
+        $item->codeno = $codeno;
         $item->name = $request->name;
         $item->photo = $path;
         $item->price = $request->price;
@@ -132,7 +134,7 @@ class ItemController extends Controller
             // 'photo' => 'required',
             // may be present or absent
             'price' => 'required',
-            'discount' => 'required',
+            'discount' => 'sometimes|required',
             'description' => 'required',
             'subcategory' => 'required',
 
