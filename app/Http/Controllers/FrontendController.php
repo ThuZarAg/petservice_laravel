@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Service_type;
 
 class FrontendController extends Controller
 {
     public function home($value='')
     {
-    	return view ('frontend.mainpage');
+        $service_types = Service_type::all();
+    	return view ('frontend.mainpage',compact('service_types'));
     }
     public function service($value='')
     {

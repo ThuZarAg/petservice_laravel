@@ -15,7 +15,7 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <div class="tile">
+        <div class="tile"> 
           <h2 class="d-inline-block">Category List</h2>
           <a href="{{route('category.create')}}" class="btn btn-info float-right">Add New</a>
           <table class="table mt-3 table-bordered dataTable">

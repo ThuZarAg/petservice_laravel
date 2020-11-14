@@ -18,7 +18,7 @@
         <div class="tile">
           <h2 class="d-inline-block">Item List</h2>
           <a href="{{route('item.create')}}" class="btn btn-info float-right">Add New</a>
-          <table class="table table-bordered dataTable">
+          <table class="table mt-3 table-bordered dataTable">
 			<thead>
 				<tr>
 					<th>No</th>
@@ -59,9 +59,6 @@
         </div>
       </div>
     </div>
-  
-
-
 <div class="modal fade" id="detailModal">
 	<div class="modal-dialog">
 		<div class="modal-content">
