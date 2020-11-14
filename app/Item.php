@@ -13,5 +13,10 @@ class Item extends Model
         'codeno', 'name', 'photo', 'price', 'discount', 'description', 'subcategory_id'
     ];
 
+    public function subcategory()
+  	{
+    	return $this->belongsTo('App\Subcategory');
+  	}
+
     
 }

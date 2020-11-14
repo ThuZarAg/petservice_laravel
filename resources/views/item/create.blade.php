@@ -3,28 +3,27 @@
 @section('content')
   <main class="app-content">
     <div class="app-title">
-      <div>
-        <h1><i class="fa fa-dashboard"></i> Blank Page</h1>
-        <p>Start a beautiful journey here</p>
-      </div>
+      	<div>
+            <h1> <i class="icofont-list"></i> Item </h1>
+        </div>
       <ul class="app-breadcrumb breadcrumb">
         <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-        <li class="breadcrumb-item"><a href="#">Blank Page</a></li>
+        <li class="breadcrumb-item"><a href="{{route('item.index')}}">Item List</a></li>
       </ul>
     </div>
     <div class="row">
       <div class="col-md-12">
         <div class="tile">
           <h2>Item Create Form</h2>
-          <form action="{{route('items.store')}}" method="post" enctype="multipart/form-data">
+          <form action="{{route('item.store')}}" method="post" enctype="multipart/form-data">
 			@csrf
-			<div class="form-group row {{ $errors->has('codeno') ? 'has-error' : '' }}">
+			{{-- <div class="form-group row {{ $errors->has('codeno') ? 'has-error' : '' }}">
 				<label for="inputCodeno" class="col-sm-2 col-form-label">Code No</label>
 				<div class="col-sm-5">
 					<input type="text" class="form-control" id="inputCodeno" name="codeno">
 					<span class="text-danger">{{ $errors->first('codeno') }}</span>
 				</div>
-			</div>
+			</div> --}}
 			<div class="form-group row {{ $errors->has('name') ? 'has-error' : '' }}">
 				<label for="inputName" class="col-sm-2 col-form-label">Name</label>
 				<div class="col-sm-5">
@@ -60,19 +59,7 @@
 					<span class="text-danger">{{ $errors->first('description') }}</span>
 				</div>
 			</div>
-			<div class="form-group row {{ $errors->has('brand') ? 'has-error' : '' }}">
-				<label for="inputBrand" class="col-sm-2 col-form-label">Brand</label>
-				<div class="col-sm-5">
-					<select class="form-control form-control-md" id="inputBrand" name="brand">
-						<optgroup label="Choose Brand">
-							@foreach($brands as $brand)
-								<option value="{{$brand->id}}">{{$brand->name}}</option>
-							@endforeach	
-						</optgroup>
-					</select>
-					<span class="text-danger">{{ $errors->first('brand') }}</span>
-				</div>
-			</div>
+			
 			<div class="form-group row {{ $errors->has('subcategory') ? 'has-error' : '' }}">
 				<label for="inputSubcategory" class="col-sm-2 col-form-label">Subcategory</label>
 				<div class="col-sm-5">

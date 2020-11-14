@@ -19,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 //CRUD(Backend)
 Route::resource('category','CategoryController');
+Route::resource('subcategory','SubcategoryController');
+Route::resource('item','ItemController');
 
 
 
