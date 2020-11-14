@@ -23,6 +23,7 @@
               <tr>
                 <th>No</th>
                 <th>Name</th>
+                <th>Photo</th>
                 <th>Description</th>
                 <th>Actions</th>
               </tr>
@@ -35,6 +36,7 @@
               <tr>
                 <td>{{$i++}}</td>
                 <td>{{$row->name}}</td>
+                <td><img src="{{ $row->photo }}" class="img-fluid" style=" width:55px;"></td>
                 <td>{{substr($row->description, 0,80)}}</td>
                 <td>
                   <a href="{{route('servicetype.edit',$row->id)}}" class="btn btn-warning">Edit</a>
