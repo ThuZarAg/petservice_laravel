@@ -76,10 +76,11 @@ class SubcategoryController extends Controller
      * @param  \App\Subcategory  $subcategory
      * @return \Illuminate\Http\Response
      */
-    public function edit(Subcategory $subcategory)
+    public function edit($id)
     {   
+        $subcategories = Subcategory::find($id);
         $categories = Category::all();
-        return view('subcategory.edit',compact('subcategory','categories'));
+        return view('subcategory.edit',compact('subcategories','categories'));
     }
 
     /**
@@ -89,21 +90,28 @@ class SubcategoryController extends Controller
      * @param  \App\Subcategory  $subcategory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Subcategory $subcategory)
+    public function update(Request $request, $id)
     {
-         $request->validate([
-            'name'=>'required|min:2'
-            ]);
-
+        $request->validate([
+            'name' => 'required',
+            'category' => 'required',
+        ]);    
+        // File Upload
         
+
+        // Update Data
+        $subcategories = Subcategory::find($id);
         $subcategories->name = $request->name;
         $subcategories->category_id = $request->category;
-        
 
         $subcategories->save();
 
+        // Redirect
+        
+
         return redirect()->route('subcategory.index');
     }
+
 
     /**
      * Remove the specified resource from storage.

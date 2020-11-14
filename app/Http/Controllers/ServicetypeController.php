@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Service_type;
 
 class ServicetypeController extends Controller
 {
@@ -13,7 +14,8 @@ class ServicetypeController extends Controller
      */
     public function index()
     {
-        //
+        $servicetypes = Service_type::all();
+        return view('servicetype.index',compact('servicetypes'));
     }
 
     /**
@@ -23,7 +25,7 @@ class ServicetypeController extends Controller
      */
     public function create()
     {
-        //
+        return view('servicetype.create');
     }
 
     /**
@@ -34,7 +36,18 @@ class ServicetypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request);
+        $request->validate([
+            'name'=>'required|min:2'
+            ]);
+
+        $servicetypes = new Service_type();
+        $servicetypes->name = $request->name;
+        $servicetypes->description = $request->description;
+
+        $servicetypes->save();
+
+        return redirect()->route('servicetype.index');
     }
 
     /**
@@ -43,9 +56,10 @@ class ServicetypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Service_type $servicetype)
     {
-        //
+       
+        return view('servicetype.show',compact('servicetype')); 
     }
 
     /**
@@ -54,9 +68,9 @@ class ServicetypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Service_type $servicetype)
     {
-        //
+        return view('servicetype.edit',compact('servicetype'));
     }
 
     /**
@@ -68,7 +82,24 @@ class ServicetypeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+        ]);    
+        // File Upload
+        
+
+        // Update Data
+        $servicetypes = Service_type::find($id);
+        $servicetypes->name = $request->name;
+        $servicetypes->description = $request->description;
+
+        $servicetypes->save();
+
+        // Redirect
+        
+
+        return redirect()->route('servicetype.index');
     }
 
     /**
@@ -77,8 +108,9 @@ class ServicetypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Service_type $servicetype)
     {
-        //
+        $servicetype->delete();
+        return redirect()->route('servicetype.index');
     }
 }

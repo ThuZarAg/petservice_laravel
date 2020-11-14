@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::resource('category','CategoryController');
 Route::resource('subcategory','SubcategoryController');
 Route::resource('item','ItemController');
+Route::resource('servicetype','ServicetypeController');
 
 
 //Frontend
