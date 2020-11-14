@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Moderna Bootstrap Template - Index</title>
+  <title>Mr.Pet</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{asset('assets/img/favicon.png')}}" rel="icon">
+  <link href="{{asset('frontend_asset/images/shop_photo/dog.png')}}" rel="icon">
   <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -54,8 +54,8 @@
           <li><a href="{{route('aboutpage')}}">About Us</a></li>
           <li><a href="{{route('servicepage')}}">Services</a></li>
           <!-- <li><a href="blog.html">Blog</a></li> -->
-          <li class="drop-down"><a href="">Shop</a>
-            <ul>
+          <li {{-- class="drop-down" --}}><a href="{{route('shoppage')}}">Shop</a>
+            {{-- <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="drop-down"><a href="#">Drop Down 2</a>
                 <ul>
@@ -69,7 +69,7 @@
               <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li>
               <li><a href="#">Drop Down 5</a></li>
-            </ul>
+            </ul> --}}
           </li>
           <li><a href="{{route('contactpage')}}">Contact Us</a></li>
         </ul>
