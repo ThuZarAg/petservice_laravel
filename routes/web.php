@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::resource('category','CategoryController');
 
 
+
 //Frontend
 Route::get('/', 'FrontendController@home')->name('mainpage');
 
@@ -32,3 +33,5 @@ Route::get('contact', 'FrontendController@contact')->name('contactpage');
 
 Route::get('about', 'FrontendController@about')->name('aboutpage');
 
+Route::resource('order', 'OrderController');
+Route::post('confirm/{id}', 'OrderController@confirm')->name('order.confirm');
