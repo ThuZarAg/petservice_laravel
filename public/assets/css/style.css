@@ -1,10 +1,3 @@
-/**
-* Template Name: Moderna - v2.1.0
-* Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -132,7 +125,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #ba2f20;
+  color: rgba(237, 126, 111);
   text-decoration: none;
 }
 
@@ -242,7 +235,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #a2cce3;
+  color: #b54022;
   text-decoration: none;
 }
 
@@ -563,7 +556,7 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: #68A4C4;
+  background: rgba(237, 126, 111);
   bottom: 0;
   left: calc(50% - 20px);
 }
@@ -620,9 +613,6 @@ section {
 /*--------------------------------------------------------------
 # Our Services
 --------------------------------------------------------------*/
-.services {
-  padding-bottom: 20px;
-}
 
 .services .icon-box {
   padding: 30px;
@@ -1525,7 +1515,7 @@ section {
   color: #68A4C4;
   border-radius: 50%;
   padding: 8px;
-  border: 2px dotted #a2cce3;
+  border: 2px dotted #b54022;
 }
 
 .contact .info-box h3 {
@@ -1964,7 +1954,7 @@ section {
 
 .blog .blog-comments .reply-form input:focus {
   box-shadow: none;
-  border-color: #a2cce3;
+  border-color: #b54022;
 }
 
 .blog .blog-comments .reply-form textarea {
@@ -1975,7 +1965,7 @@ section {
 
 .blog .blog-comments .reply-form textarea:focus {
   box-shadow: none;
-  border-color: #a2cce3;
+  border-color: #b54022;
 }
 
 .blog .blog-comments .reply-form .form-group {
@@ -2129,7 +2119,7 @@ section {
 }
 
 .blog .sidebar .recent-posts h4 a {
-  color: #0d2735;
+  color: rgba(237, 126, 111);
   transition: 0.3s;
 }
 
@@ -2184,7 +2174,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #0b212d;
+  background:rgba(237, 126, 111, 0.5);
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
@@ -2192,7 +2182,7 @@ section {
 
 #footer .footer-newsletter {
   padding: 50px 0;
-  background: #0d2735;
+  background: rgba(237, 126, 111, 0.5);;
 }
 
 #footer .footer-newsletter h4 {
@@ -2201,7 +2191,7 @@ section {
   padding: 0;
   line-height: 1;
   font-weight: 600;
-  color: #a2cce3;
+  color: #b54022;
 }
 
 #footer .footer-newsletter form {
@@ -2228,20 +2218,20 @@ section {
   font-size: 16px;
   padding: 0 20px;
   margin: 3px;
-  background: #68A4C4;
+  background: rgba(237, 126, 111, 0.5);
   color: #fff;
   transition: 0.3s;
   border-radius: 50px;
 }
 
 #footer .footer-newsletter form input[type="submit"]:hover {
-  background: #468db3;
+  background: rgba(237, 126, 111);
 }
 
 #footer .footer-top {
-  background: #0d2735;
-  border-top: 1px solid #17455e;
-  border-bottom: 1px solid #123649;
+  background: rgba(237, 126, 111, 0.5);
+  border-top: 1px solid rgba(237, 126, 111, 0.5);
+  border-bottom: 1px solid rgba(237, 126, 111, 0.5);
   padding: 60px 0 30px 0;
 }
 
@@ -2254,7 +2244,7 @@ section {
   margin: 0 0 20px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
-  color: #a2cce3;
+  color: #b54022;
   font-weight: 600;
 }
 
@@ -2290,7 +2280,7 @@ section {
 #footer .footer-top h4 {
   font-size: 18px;
   font-weight: 600;
-  color: #a2cce3;
+  color: #b54022;
   position: relative;
   padding-bottom: 12px;
 }
@@ -2307,7 +2297,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #a2cce3;
+  color: #b54022;
   font-size: 18px;
   line-height: 1;
 }
@@ -2330,7 +2320,7 @@ section {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #a2cce3;
+  color: #b54022;
 }
 
 #footer .footer-top .footer-contact {
@@ -2354,5 +2344,5 @@ section {
 }
 
 #footer .credits a {
-  color: #a2cce3;
+  color: #b54022;
 }

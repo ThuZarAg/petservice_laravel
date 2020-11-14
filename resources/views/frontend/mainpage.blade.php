@@ -8,9 +8,9 @@
     <!-- Slide 1 -->
     <div class="carousel-item active">
       <div class="carousel-container">
-        <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Mr.Pet</span></h2>
-        <p class="animate__animated animate__fadeInUp">“Such short little lives our pets have to spend with us, & they spend most of it waiting for us to come home each day.”</p>
-        <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+        <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Mr.Pet !</span></h2>
+        <p class="animate__animated animate__fadeInUp">“We are providing Pet training Services and accessories & food for your pets.”</p>
+        <a href="" class="btn-get-started animate__animated animate__fadeInUp">Click for Register</a>
       </div>
     </div>
 
@@ -19,7 +19,7 @@
       <div class="carousel-container">
         <h2 class="animate__animated animate__fadeInDown">Nice To Meet You!</h2>
         <p class="animate__animated animate__fadeInUp">“A dog is the only thing on earth that loves you more than he loves himself”</p>
-        <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+        <a href="" class="btn-get-started animate__animated animate__fadeInUp">Click for Register</a>
       </div>
     </div>
 
@@ -28,7 +28,7 @@
       <div class="carousel-container">
         <h2 class="animate__animated animate__fadeInDown">We’re here when you need us.</h2>
         <p class="animate__animated animate__fadeInUp">“Dogs are not our whole life, but they make our lives whole.”</p>
-        <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+        <a href="" class="btn-get-started animate__animated animate__fadeInUp">Click for Register</a>
       </div>
     </div>
 
@@ -50,9 +50,12 @@
   <!-- ======= Services Section ======= -->
   <section class="services">
     <div class="container">
-      <h3 class="text-center mb-5">Our Services</h3>
+       <div class="section-title">
+        <h2>Our Services</h2>
+        <p class="mt-3a">Our services are geared towards meeting your dog’s unique needs and ensuring that your attention can be where you need it to be. When you know that your dog has been ran, walked, fed, relieved, and entertained, you can be present at work or wherever you need to be.</p>
+      </div>
       
-      <div class="row">
+      <div class="row mt-5">
         @foreach($service_types as $row)
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" >
           <div class="icon-box icon-box-pink">
