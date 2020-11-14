@@ -15,8 +15,9 @@ class FrontendController extends Controller
     	return view ('frontend.mainpage',compact('service_types','items'));
     }
     public function service($value='')
-    {
-    	return view ('frontend.service');
+    {   
+        $service_types = Service_type::all();
+    	return view ('frontend.service',compact('service_types'));
     }
     public function shop($value='')
     {

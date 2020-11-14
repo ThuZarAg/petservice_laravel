@@ -38,11 +38,24 @@ class ServicetypeController extends Controller
     {
         // dd($request);
         $request->validate([
-            'name'=>'required|min:2'
+            'name'=>'required|min:2',
+            "photo" => "required|mimes:jpeg,bmp,png",
             ]);
+
+        // if include file, upload
+        if($request->file()) {
+            // 624872374523_a.jpg
+            $fileName = time().'_'.$request->photo->getClientOriginalName();
+
+            // brandimg/624872374523_a.jpg
+            $filePath = $request->file('photo')->storeAs('servicetypeimg', $fileName, 'public');
+
+            $path = '/storage/'.$filePath;
+        }
 
         $servicetypes = new Service_type();
         $servicetypes->name = $request->name;
+        $servicetypes->photo = $path;
         $servicetypes->description = $request->description;
 
         $servicetypes->save();
@@ -81,17 +94,36 @@ class ServicetypeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
+    {   
+
         $request->validate([
-            'name' => 'required',
-            'description' => 'required',
-        ]);    
+            "name" => "required",
+            "photo" => "sometimes|required|mimes:jpeg,bmp,png", // a.jpg
+            "oldphoto" => "required",
+            "description" => "required"
+        ]); 
+
+        //dd($request);   
         // File Upload
-        
+        // if include file, upload
+        if($request->file()) {
+            // delete olo photo
+
+            // 624872374523_a.jpg
+            $fileName = time().'_'.$request->photo->getClientOriginalName();
+
+            // brandimg/624872374523_a.jpg
+            $filePath = $request->file('photo')->storeAs('servicetypeimg', $fileName, 'public');
+
+            $path = '/storage/'.$filePath;
+        }else{
+            $path = $request->oldphoto;
+        }
 
         // Update Data
         $servicetypes = Service_type::find($id);
         $servicetypes->name = $request->name;
+        $servicetypes->photo = $path;
         $servicetypes->description = $request->description;
 
         $servicetypes->save();

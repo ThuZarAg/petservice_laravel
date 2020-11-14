@@ -19,6 +19,8 @@
           <div class="card-body">
                         <h5 class="card-title">Service Types: <span class="text-primary">{{ $servicetype->name }}</span></h5>
 
+                        <img src="{{asset($servicetype->photo)}}" class="img-fluid" alt="">
+
                         <h5 class="card-title">Service Description: <span class="text-primary">{{ $servicetype->description }}</span></h5>
 
           
