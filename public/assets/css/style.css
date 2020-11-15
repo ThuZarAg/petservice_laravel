@@ -3223,3 +3223,13 @@ button.btnMain:hover{
     top: 30px;
     transform: rotate(45deg);
 }
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.card{
+  border:none;
+}

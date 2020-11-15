@@ -4,9 +4,9 @@
 
 <div class="col-lg-3 col-md-6 my-4">
   <div class="card h-100">
-    <a href="#"><img class="img-fluid" src="{{asset($item->photo)}}" alt=""></a>
+    <a href="#"><img class="card-img-top" src="{{asset($item->photo)}}" alt=""></a>
     <div class="card-body">
-      <h6 class="card-title">
+      <h6 class="card-title" style="font-size: 14px;">
         <a href="#">{{$item->name}}</a>
       </h6>
       <h6>
@@ -17,8 +17,8 @@
         	{{number_format($item->price)}} MMK
       	@endif
       </h6>
-      <a href="#" class="btn btn-info " >Detail</a>
-      <a href="#" class="btn btn-info " >Cart</a>
+      <a href="#" class="btn btn-danger mt-3" >Detail</a>
+      <a href="#" class="btn btn-danger mt-3" > Cart</a>
       
     </div>
    

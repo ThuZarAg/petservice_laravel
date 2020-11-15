@@ -47,8 +47,8 @@
           <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
 
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h5 class="title"><a href="">"We truly understand how to take care not only our pet but also yours as owners as well. You always look forward to our detailed and daily updates."</a></h5>
+              <!-- <div class="icon"><i class="fas fa-paw"></i></div> -->
+              <h5 class="" ><p style="font-family: Montserrat_Regular; line-height: 50px;">"We truly understand how to take care not only our pet but also yours as owners as well. You always look forward to our detailed and daily updates."</p></h5>
               
             </div>
 
