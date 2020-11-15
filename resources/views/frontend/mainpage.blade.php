@@ -102,7 +102,7 @@
           <div class="icon-box icon-box-pink">
             <div class=""><img src="{{$row->photo}}" style="border-radius: 50%;height: 80px; width:80px;"class="img-fluid mb-4"></div>
             <h4 class="title"><a href="">{{$row->name}}</a></h4>
-            <p class="description">{{$row->description}}</p>
+            <p class="description">{{substr($row->description, 0,88)}}...</p>
           </div>
 
         </div>
@@ -111,12 +111,14 @@
     </div>
   </section><!-- End Services Section -->
 
-</div>
 
+<!-- ======= Flash Sales ======= -->
+<section class="flashsales" >
 <div class="container">
-<h5>Fresh Items </h5>
+   <div class="section-title">
+        <h2>Flash Sales</h2>
 <div class="col-lg-12">
-  <div class="row mt-4 ml-3">
+  <div class="row mt-4 ">
 
     @foreach($items as $item)
     <x-item-component :item="$item"></x-item-component>
@@ -125,6 +127,68 @@
 
 </div>
 </div>
+</div>
+</section>
+<hr style="color:rgba(237, 126, 111,0.5)">
+<!-- ======= Features Section ======= -->
+    <section class="features" >
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Blogs</h2>
+          <p>If you are a Dog Lover, You must read this...</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5 mt-5">
+            <img src="assets/img/1.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4">
+            <h2 style="text-align: justify;">5 Benefits Of Having A Dog Walker When Working From Home</h2><br>
+            <p class="font-italic">
+              You are finally living the dream! Working from home!!  Roll out of bed, put the coffee on, and put Max out for his morning bathroom break. You settle in to start work and Max is begging you to go out for a walk… all day long!
+
+              There are many benefits of hiring a dog walker in Edmonton while working from home:
+            </p>
+            <ul>
+              <li><i class="icofont-check"></i> Gives Your Dog Routine</li>
+              <li><i class="icofont-check"></i> Keeps You Productive</li>
+              <li><i class="icofont-check"></i> Keeps Your Pup From Barking While On An Important Zoom Call</li>
+              <li><i class="icofont-check"></i> Lets You Wake Up Later Or Finish Work Early</li>
+              <li><i class="icofont-check"></i> Keeps Your Pet Socialized</li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="row mt-5" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2 mt-3">
+            <img src="assets/img/2.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5 order-2 order-md-1">
+            <h2>5 Tips For Camping With Dogs</h2><br>
+            <p class="font-italic">
+              Hallelujah, Provincial and National campgrounds have started to open up again and are even slowly expanding capacity! All the more reason for Albertans to explore this beautiful province of ours! Plus it’s a great way to spend time with family, friends and of course our fur babies.
+
+Whether you like to camp just outside of Edmonton or in the Rockies, there are many things to consider before heading out to ensure that you are well prepared and that everyone has a great time. 
+            </p>
+            <p>
+              Things like: 
+            </p>
+             <ul>
+              <li><i class="icofont-check"></i>Researching the rules and regulations of where you intend to camp</li>
+              <li><i class="icofont-check"></i> What kind of pup do you have?</li>
+              <li><i class="icofont-check"></i> Is your pup treated for ticks and fleas?</li>
+              <li><i class="icofont-check"></i> What supplies does your dog need?</li>
+              <li><i class="icofont-check"></i> Bringing a Pet First Aid Kit</li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Features Section -->
+
+  </main><!-- End #main -->
 </main><!-- End #main -->
 @endsection
 
