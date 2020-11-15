@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Service_type;
-
+use App\Category;
 use App\Item;
 
 
