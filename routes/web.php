@@ -32,7 +32,7 @@ Route::get('/', 'FrontendController@home')->name('mainpage');
 Route::get('service', 'FrontendController@service')->name('servicepage');
 
 Route::get('shop', 'FrontendController@shop')->name('shoppage');
-Route::get('shopitem','FrontendController@shopitem')->name('shopitem');
+
 Route::get('itemsbysubcategory/{id}', 'FrontendController@itemsbysubcategory')->name('itemsbysubcategory');
 
 Route::get('contact', 'FrontendController@contact')->name('contactpage');

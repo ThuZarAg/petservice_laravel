@@ -1,29 +1,51 @@
 @extends('frontendtemplate')
 
 @section('content')
-	<img src="{{asset('frontend_asset/images/shop_photo/5.jpg')}}" class="d-block w-100" alt="">
+  <div class="container">
 
     <div class="row">
-	    <div class="col-md-12 mt-4">
-	    	<h3 class="text-center mb-5">DOG SUPPLIES</h3>
-	    </div>
-	    <div class="row offset-md-1">
-	      	@foreach($categories as $row)
-		    <div class="col-lg-2 col-md-3 col-sm-6 ml-4">
-		    	<a href="{{route('shopitem')}}">
-			  	<div class="card" >
-			    	<img class="card-img-top" src="{{asset($row->photo)}}" alt="" >
-				    <div class="card-body">
-				      <h6 class="card-title">
-				        {{$row->name}}
-				      </h6>
-				    </div>
-			  	</div>
-			  	</a>
-			</div>
-			@endforeach
-		</div>
-	</div>
 
+      <div class="col-lg-3">
+
+        <x-sidebar-component></x-sidebar-component>
+
+      </div>
+      
+      {{-- Show items --}}
+
+      <div class="col-lg-9">
+        <div class="row mt-4">
+          <div class="col-md-12">
+            <h5>Available Items </h5>
+          </div>
+          @foreach($items as $item)
+            <x-item-component :item="$item"></x-item-component>
+          @endforeach
+      </div>
+
+    </div>
    
+
+  </div>
 @endsection
+
+
+{{-- @section('script')
+<script type="text/javascript" src="{{asset('my_asset/js/custom.js')}}"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.ajaxSetup({
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+      });
+      $('.subcategory').click(function (e) {
+        e.preventDefault();
+        let subcategory_id = $(this).data('id');
+        $.post("{{route('bysubcategory')}}",{id:subcategory_id},function (response) {
+          console.log(response);
+        })
+      })
+    })
+  </script>
+@endsection --}}

@@ -111,30 +111,50 @@
   </div>
 </section><!-- End Services Section -->
 
-<!-- ======= Features Section ======= -->
-<div class="row mt-5">
-  <h1> Discount Item </h1>
-</div>
 <!-- Disocunt Item -->
 <div class="row">
-  @foreach($items as $item)
-  <div class="col-12">    
+  <div class="col-12">
     <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
-     @if($item->discount>0)
-     <div class="MultiCarousel-inner">
-       <img src="{{$item->photo}}">
+      <div class="MultiCarousel-inner">
+
+        @foreach($items as $item)
+
+
+        <div class="item">
+          <div class="pad15">
+            <img src="{{$item->photo}}">
+            <p>{{$item->name}}</p>
+            
+             @if($item->discount>0){
+
+                {{number_format($item->discount)}}
+                <del>{{$item->price}}</del>
+           }@endif
+         
+
+         <div class="star-rating">
+          <ul class="list-inline">
+            <li class="list-inline-item"><i class='bx bxs-star' ></i></li>
+            <li class="list-inline-item"><i class='bx bxs-star' ></i></li>
+            <li class="list-inline-item"><i class='bx bxs-star' ></i></li>
+            <li class="list-inline-item"><i class='bx bxs-star' ></i></li>
+            <li class="list-inline-item"><i class='bx bxs-star-half' ></i></li>
+          </ul>
+        </div>
+
+        <button>Add to Cart</button>
+
+       </div>
      </div>
-     {{number_format($item->discount)}}
 
-     <del>{{$item->price}}</del>
-     <p>{{$item->name}}</p>
-     @endif
+     @endforeach
+
    </div>
+   <button class="btn btnMain leftLst"><</button>
+   <button class="btn btnMain rightLst">></button>
  </div>
- @endforeach
 </div>
-
-
+</div>
 
 </main><!-- End #main -->
 @endsection

@@ -17,13 +17,10 @@
         	{{number_format($item->price)}} MMK
       	@endif
       </h6>
-      <a href="#" class="btn btn-info " {{-- data-jname="Sapphire" data-jprice="65000" --}}>Detail</a>
-      <a href="#" class="btn btn-info " {{-- data-jname="Sapphire" data-jprice="65000" --}}>Cart</a>
+      <a href="#" class="btn btn-info " >Detail</a>
+      <a href="#" class="btn btn-info " >Cart</a>
       
-      {{-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p> --}}
     </div>
-    {{-- <div class="card-footer">
-      <a href="{{route('itemdetail',$item->id)}}" class="btn btn-info">Detail</a>
-    </div> --}}
+   
   </div>
 </div>

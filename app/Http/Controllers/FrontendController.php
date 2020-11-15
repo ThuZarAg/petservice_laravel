@@ -25,8 +25,8 @@ class FrontendController extends Controller
     }
     public function shop($value='')
     {
-        $categories = Category::all();
-    	return view ('frontend.shop',compact('categories'));
+        $items = Item::all();
+    	return view ('frontend.shop',compact('items'));
     }
     
     public function contact($value='')
@@ -38,15 +38,23 @@ class FrontendController extends Controller
     	return view ('frontend.about');
     }
 
-    public function shopitem($value='')
-    {
-        $items = Item::all();
-        return view ('frontend.shopitem',compact('items'));
-    }
+    // public function shopitem($value='')
+    // {
+    //     $items = Item::all();
+    //     return view ('frontend.shopitem',compact('items'));
+    // }
+
+    // public function shopitem($id)
+    // {
+    //     $items = Item::find($id);
+    //     $mycategory = Category::find($id);
+    //     return view ('frontend.shopitem',compact('items','mycategory'));
+    // }
 
     public function itemsbysubcategory($id)
     {
         $mysubcategory = Subcategory::find($id);
         return view('frontend.itemsbysubcategory',compact('mysubcategory'));
     }
+
 }
