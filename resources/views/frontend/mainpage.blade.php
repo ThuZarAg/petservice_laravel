@@ -50,57 +50,56 @@
   <!-- ======= Services Section ======= -->
   <section class="services">
     <div class="container">
-       <div class="section-title">
-        <h2>Our Services</h2>
-        <p class="mt-3a">Our services are geared towards meeting your dog’s unique needs and ensuring that your attention can be where you need it to be. When you know that your dog has been ran, walked, fed, relieved, and entertained, you can be present at work or wherever you need to be.</p>
-      </div>
-      
-      <div class="row mt-5">
-        @foreach($service_types as $row)
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" >
-          <div class="icon-box icon-box-pink">
-            <div class=""><img src="{{$row->photo}}" style="border-radius: 50%;height: 80px; width:80px;"class="img-fluid mb-4"></div>
-            <h4 class="title"><a href="">{{$row->name}}</a></h4>
-            <p class="description">{{$row->description}}</p>
-          </div>
-          
-        </div>
-        @endforeach
-      </div>
+     <div class="section-title">
+      <h2>Our Services</h2>
+      <p class="mt-3a">Our services are geared towards meeting your dog’s unique needs and ensuring that your attention can be where you need it to be. When you know that your dog has been ran, walked, fed, relieved, and entertained, you can be present at work or wherever you need to be.</p>
     </div>
-  </section><!-- End Services Section -->
 
- <div class="row">
-      <div class="col-12">
-        <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
-                <div class="MultiCarousel-inner">
-      <div class="section-title">
-        <h2>Features</h2>
-        @foreach($items as $item)
-       
-        <div class="row mt-5">
-          @if($item->discount>0){
-           <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
-            <div class="icon-box icon-box-pink">
-           <img src="{{$item->photo}}">
-            </div>
-            {{number_format($item->discount)}}
-
-            <del>{{$item->price}}</del>
-             <p>{{$item->name}}</p>
-            </div>
-
-          }
-          @endif
+    <div class="row mt-5">
+      @foreach($service_types as $row)
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" >
+        <div class="icon-box icon-box-pink">
+          <div class=""><img src="{{$row->photo}}" style="border-radius: 50%;height: 80px; width:80px;"class="img-fluid mb-4"></div>
+          <h4 class="title"><a href="">{{$row->name}}</a></h4>
+          <p class="description">{{$row->description}}</p>
         </div>
-         @endforeach
-      </div>
 
+      </div>
+      @endforeach
     </div>
   </div>
+</section><!-- End Services Section -->
+
+<!-- ======= Features Section ======= -->
+<div class="row mt-5">
+      <h1> Discount Item </h1>
+    </div>
+
+      <!-- Disocunt Item -->
+    <div class="row">
+      
+    @foreach($items as $item)
+
+    <div class="col-12">
+      @if($item->discount>0)
+      <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+        <div class="MultiCarousel-inner">
+       <img src="{{$item->photo}}">
+        </div>
+     {{number_format($item->discount)}}
+
+     <del>{{$item->price}}</del>
+     <p>{{$item->name}}</p>
+      </div>
+
+
+   @endif
+ </div>
+ @endforeach
 </div>
+
 </div>
-  </section><!-- End Features Section -->
+</section><!-- End Features Section -->
 
 </main><!-- End #main -->
 @endsection
