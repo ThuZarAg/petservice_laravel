@@ -38,23 +38,22 @@ class FrontendController extends Controller
     	return view ('frontend.about');
     }
 
-    // public function shopitem($value='')
-    // {
-    //     $items = Item::all();
-    //     return view ('frontend.shopitem',compact('items'));
-    // }
-
-    // public function shopitem($id)
-    // {
-    //     $items = Item::find($id);
-    //     $mycategory = Category::find($id);
-    //     return view ('frontend.shopitem',compact('items','mycategory'));
-    // }
-
     public function itemsbysubcategory($id)
     {
         $mysubcategory = Subcategory::find($id);
         return view('frontend.itemsbysubcategory',compact('mysubcategory'));
+    }
+
+    public function itemdetail($id)
+    {
+        $item = Item::find($id);
+        // dd($item);
+        return view('frontend.itemdetail',compact('item'));
+    }
+
+    public function cart($value='')
+    {
+        return view('frontend.cartpage');
     }
 
 }

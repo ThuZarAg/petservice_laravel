@@ -35,6 +35,10 @@ Route::get('shop', 'FrontendController@shop')->name('shoppage');
 
 Route::get('itemsbysubcategory/{id}', 'FrontendController@itemsbysubcategory')->name('itemsbysubcategory');
 
+Route::get('itemdetail/{id}', 'FrontendController@itemdetail')->name('itemdetail');
+
+Route::get('cart', 'FrontendController@cart')->name('cartpage');
+
 Route::get('contact', 'FrontendController@contact')->name('contactpage');
 
 Route::get('about', 'FrontendController@about')->name('aboutpage');

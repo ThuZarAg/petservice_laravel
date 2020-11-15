@@ -27,6 +27,9 @@
   <link href="{{asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
   <link href="{{asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
 
+  {{-- Fontawesome --}}
+  <link rel="stylesheet" type="text/css" href="{{asset('fontawesome/css/all.min.css')}}">
+
   <!-- Template Main CSS File -->
   <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
 
@@ -72,6 +75,8 @@
               <li><i class="bx bx-chevron-right"></i> <a href="{{route('aboutpage')}}">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{{route('servicepage')}}">Services</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{{route('shoppage')}}">Our Shop</a></li>
+              
+              
               <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
             </ul>
           </div>
@@ -116,7 +121,7 @@
               <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
               Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
             </div>
-    </div>
+          </div>
         </div>
       </div>
     </div>
@@ -140,6 +145,8 @@
 
   <!-- Template Main JS File -->
   <script src="{{asset('assets/js/main.js')}}"></script>
+
+  @yield('script')
 
 </body>
 

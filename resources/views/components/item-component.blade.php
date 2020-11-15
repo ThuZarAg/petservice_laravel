@@ -6,9 +6,9 @@
   <div class="card h-100">
     <a href="#"><img class="card-img-top" src="{{asset($item->photo)}}" alt=""></a>
     <div class="card-body">
-      <h6 class="card-title" style="font-size: 14px;">
+      <h5 class="card-title" style="font-size: 14px;">
         <a href="#">{{$item->name}}</a>
-      </h6>
+      </h5>
       <h6>
       	@if($item->discount > 0)
         	{{number_format($item->discount)}} MMK <br>
@@ -17,8 +17,8 @@
         	{{number_format($item->price)}} MMK
       	@endif
       </h6>
-      <a href="#" class="btn btn-danger mt-3" >Detail</a>
-      <a href="#" class="btn btn-danger mt-3" > Cart</a>
+      <a href="{{route('itemdetail',$item->id)}}" class="btn btn-outline-danger mt-3" >Detail</a>
+      <a href="{{route('cartpage')}}" class="btn btn-outline-danger mt-3" > Cart</a>
       
     </div>
    

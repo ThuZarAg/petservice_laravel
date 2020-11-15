@@ -13,31 +13,16 @@
    </div>
 
    <nav class="nav-menu float-right d-none d-lg-block">
-    <ul>
-      <li class="active"><a href="{{route('mainpage')}}">Home</a></li>
-      <li><a href="{{route('aboutpage')}}">About Us</a></li>
-      <li><a href="{{route('servicepage')}}">Services</a></li>
-      <!-- <li><a href="blog.html">Blog</a></li> -->
-      <li {{-- class="drop-down" --}}><a href="{{route('shoppage')}}">Shop</a>
-            {{-- <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Drop Down 2</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul> --}}
-          </li>
-          <li><a href="{{route('contactpage')}}">Contact Us</a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
+      <ul>
+        <li class="active"><a href="{{route('mainpage')}}">Home</a></li>
+        <li><a href="{{route('aboutpage')}}">About Us</a></li>
+        <li><a href="{{route('servicepage')}}">Services</a></li>
+        <!-- <li><a href="blog.html">Blog</a></li> -->
+        <li><a href="{{route('shoppage')}}">Shop</a></li>
+        <li><a href="{{route('contactpage')}}">Contact Us</a></li>
+        <li><a href="{{route('cartpage')}}">Cart<i class="icofont-shopping-cart"></i><span class="badge badge-pill badge-light badge-notify cartNotistyle cartnoti"></span></a></li>
+      </ul>
+    </nav><!-- .nav-menu -->
 
     </div>
   </header><!-- End Header -->
@@ -170,7 +155,7 @@
             <p class="font-italic">
               Hallelujah, Provincial and National campgrounds have started to open up again and are even slowly expanding capacity! All the more reason for Albertans to explore this beautiful province of ours! Plus it’s a great way to spend time with family, friends and of course our fur babies.
 
-Whether you like to camp just outside of Edmonton or in the Rockies, there are many things to consider before heading out to ensure that you are well prepared and that everyone has a great time. 
+              Whether you like to camp just outside of Edmonton or in the Rockies, there are many things to consider before heading out to ensure that you are well prepared and that everyone has a great time. 
             </p>
             <p>
               Things like: 
