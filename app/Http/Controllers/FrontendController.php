@@ -14,7 +14,7 @@ class FrontendController extends Controller
     public function home($value='')
     {
         $service_types = Service_type::all();
-        $items = Item::all();
+        $items = Item::take(8)->get();
         $categories =Category::all();
     	return view ('frontend.mainpage',compact('service_types','items','categories'));
     }
