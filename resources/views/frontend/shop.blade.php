@@ -10,14 +10,16 @@
 	    <div class="row offset-md-1">
 	      	@foreach($categories as $row)
 		    <div class="col-lg-2 col-md-3 col-sm-6 ml-4">
+		    	<a href="{{route('shopitem')}}">
 			  	<div class="card" >
-			    	<a href="#"><img class="card-img-top" src="{{asset($row->photo)}}" alt="" ></a>
+			    	<img class="card-img-top" src="{{asset($row->photo)}}" alt="" >
 				    <div class="card-body">
-				      <h4 class="card-title">
-				        <a href="#">{{$row->name}}</a>
-				      </h4>
+				      <h6 class="card-title">
+				        {{$row->name}}
+				      </h6>
 				    </div>
 			  	</div>
+			  	</a>
 			</div>
 			@endforeach
 		</div>

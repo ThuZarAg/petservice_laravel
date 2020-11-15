@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Service_type;
 use App\Category;
+use App\Subcategory;
 use App\Item;
 
 
@@ -27,6 +28,7 @@ class FrontendController extends Controller
         $categories = Category::all();
     	return view ('frontend.shop',compact('categories'));
     }
+    
     public function contact($value='')
     {
     	return view ('frontend.contact');
@@ -34,5 +36,17 @@ class FrontendController extends Controller
     public function about($value='')
     {
     	return view ('frontend.about');
+    }
+
+    public function shopitem($value='')
+    {
+        $items = Item::all();
+        return view ('frontend.shopitem',compact('items'));
+    }
+
+    public function itemsbysubcategory($id)
+    {
+        $mysubcategory = Subcategory::find($id);
+        return view('frontend.itemsbysubcategory',compact('mysubcategory'));
     }
 }

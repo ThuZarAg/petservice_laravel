@@ -1,33 +1,47 @@
 @extends('frontendtemplate')
 
 @section('content')
-<main id="main">
+ <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-nontransparent">
+    <div class="container">
 
-  <!-- ======= Our Services Section ======= -->
-  <section class="breadcrumbs">
+      <div class="logo float-left">
+       <!--  <h1 class="text-light"><a href="index.html"><img src="../../img/logo1.jpg" alt="Logo" class="img-fluid"></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+         <a href="index.html"><img src="{{asset('assets/img/logo2.png')}}" alt="Logo" class="img-fluid" ></a>
+           
+      </div>
+
+     <section class="breadcrumbs">
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2>Our Services</h2>
+        <h2 style="margin-left: 20px;">Our Services</h2>
         <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>Our Services</li>
+          <li><a href="{{route('mainpage')}}">Home</a></li>
+          <li>Services</li>
         </ol>
       </div>
 
     </div>
-  </section><!-- End Our Services Section -->
+   </section><!-- End Our Services Section -->
+    </div>
+  </header><!-- End Header -->
+
+<main id="main">
+  <!-- ======= Our Services Section ======= -->
+  
 
   
 
     <!-- ======= Why Us Section ======= -->
-    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
+    <section class="why-us section-bg" >
       <div class="container">
 
-        <div class="row">
+        <div class="row" data-aos="fade-up" date-aos-delay="200">
           <div class="col-lg-6 video-box">
-            <img src="assets/img/why-us.jpg" class="img-fluid" alt="">
-            <a href="{{ asset('frontend_asset\images\services\video.mp4') }}" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+            <img src="assets/img/why-us1.jpg" class="img-fluid" alt="">
+            <a href="https://www.youtube.com/watch?v=zVFTgSUhK6E" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
           </div>
 
           <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
