@@ -75,7 +75,7 @@
 
                 <h5 class="card-title"><a href="#">{{$row->name}}</a></h5>
                 <p class="card-text">{{$row->description}}</p>
-                <div class="read-more"><a href="#"><i class="icofont-arrow-right"></i> Read More</a></div>
+                <div class="read-more"><a href="{{route('package',$row->id)}}"><i class="icofont-arrow-right"></i> Read More</a></div>
               </div>
             </div>
           </div>

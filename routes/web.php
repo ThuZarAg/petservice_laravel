@@ -31,6 +31,8 @@ Route::get('/', 'FrontendController@home')->name('mainpage');
 
 Route::get('service', 'FrontendController@service')->name('servicepage');
 
+Route::get('servicedetail/{id}', 'FrontendController@package')->name('package');
+
 Route::get('shop', 'FrontendController@shop')->name('shoppage');
 
 Route::get('itemsbysubcategory/{id}', 'FrontendController@itemsbysubcategory')->name('itemsbysubcategory');
