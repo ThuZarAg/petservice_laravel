@@ -7,6 +7,7 @@ use App\Service_type;
 use App\Category;
 use App\Subcategory;
 use App\Item;
+use App\Package;
 
 
 class FrontendController extends Controller
@@ -23,6 +24,14 @@ class FrontendController extends Controller
         $service_types = Service_type::all();
     	return view ('frontend.service',compact('service_types'));
     }
+
+    public function package($id)
+    {   
+        $servicedetails = Package::where('servicetype_id', $id)->get();
+        //dd($servicedetails);
+        return view ('frontend.package',compact('servicedetails'));
+    }
+
     public function shop($value='')
     {
         $items = Item::all();
