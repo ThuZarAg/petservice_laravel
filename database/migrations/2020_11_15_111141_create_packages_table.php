@@ -15,7 +15,19 @@ class CreatePackagesTable extends Migration
     {
         Schema::create('packages', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->text('duration');
+            $table->integer('price');
+            $table->integer('total');
+          
+            $table->unsignedBigInteger('servicetype_id');
+                          
+            $table->foreign('servicetype_id')
+                  ->references('id')->on('service_types')
+                  ->onDelete('cascade'); 
+          
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -14,7 +14,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="tile">
-				<h2>Brand Edit Form</h2>
+				<h2>Item Edit Form</h2>
 				<form action="{{route('item.update',$item->id)}}" method="post" enctype="multipart/form-data">
 					@csrf
 					@method('PUT')

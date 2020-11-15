@@ -22,6 +22,7 @@ Route::resource('category','CategoryController');
 Route::resource('subcategory','SubcategoryController');
 Route::resource('item','ItemController');
 Route::resource('servicetype','ServicetypeController');
+Route::resource('package','PackageController');
 
 
 

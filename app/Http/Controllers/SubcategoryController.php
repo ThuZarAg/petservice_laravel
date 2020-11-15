@@ -43,7 +43,7 @@ class SubcategoryController extends Controller
      */
     public function store(Request $request)
     {
-       // dd($request);
+       dd($request);
         $request->validate([
             'name'=>'required|min:2'
             ]);
