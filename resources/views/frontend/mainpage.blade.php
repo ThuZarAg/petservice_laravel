@@ -111,32 +111,6 @@
   </div>
 </section><!-- End Services Section -->
 
-{{-- <!-- ======= Features Section ======= -->
-<div class="row mt-5">
-  <h1> Discount Item </h1>
-</div>
-<!-- Disocunt Item -->
-<div class="row">
-  
-  <div class="col-12">    
-    <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
-     @if($item->discount>0)
-     <div class="MultiCarousel-inner">
-
-      @foreach($items as $item)
-
-       <img src="{{$item->photo}}">
-     </div>
-     {{number_format($item->discount)}}
-
-     <del>{{$item->price}}</del>
-     <p>{{$item->name}}</p>
-     @endif
-   </div>
- </div>
- @endforeach
-</div> --}}
-
 <!-- Disocunt Item -->
 <div class="row">
   <div class="col-12">

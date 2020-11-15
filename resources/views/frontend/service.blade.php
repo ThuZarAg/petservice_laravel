@@ -47,16 +47,12 @@
           <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
 
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h5 class="title"><a href="">"We truly understand how to take care not only our pet but also yours as owners as well. You always look forward to our detailed and daily updates."</a></h5>
+              
             </div>
 
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
+            
 
           </div>
         </div>
