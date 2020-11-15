@@ -1,23 +1,36 @@
 @extends('frontendtemplate')
 
 @section('content')
+
+<!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-nontransparent">
+    <div class="container">
+
+      <div class="logo float-left">
+       <!--  <h1 class="text-light"><a href="index.html"><img src="../../img/logo1.jpg" alt="Logo" class="img-fluid"></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+         <a href="index.html"><img src="{{asset('assets/img/logo2.png')}}" alt="Logo" class="img-fluid" ></a>
+           
+      </div>
+
+     <section class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2 style="margin-left: 20px;">Contact Us</h2>
+        <ol>
+          <li><a href="{{route('mainpage')}}">Home</a></li>
+          <li>Contact</li>
+        </ol>
+      </div>
+
+    </div>
+   </section><!-- End Our Services Section -->
+    </div>
+  </header><!-- End Header -->
  <main id="main">
 
-    <!-- ======= Contact Section ======= -->
-    <section class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Contact</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Contact</li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
+   
     <!-- ======= Contact Section ======= -->
     <section class="contact" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
       <div class="container">
