@@ -15,11 +15,11 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <div class="tile">
+        <div class="tile"> 
           <h2 class="d-inline-block">Item List</h2>
           <a href="{{route('item.create')}}" class="btn btn-info float-right">Add New</a>
           <table class="table mt-3 table-bordered dataTable">
-			<thead>
+            <thead>
 				<tr>
 					<th>No</th>
 					<th>Code No</th>
@@ -37,8 +37,16 @@
 					<td>{{$i++}}</td>
 					<td>{{$item->codeno}}</td>
 					<td>{{$item->name}}</td>
-					<td>{{$item->price}}</td>
 					<td>
+	                  	@if($item->discount > 0)
+	                    	{{number_format($item->discount)}} MMK <br>
+	                    	<del class="text-danger">{{$item->price}} MMK</del>
+	                  	@else
+	                    	{{number_format($item->price)}} MMK
+	                  	@endif
+	                </td> 
+
+	          		<td>
 						<a href="{{route('item.edit',$item->id)}}" class="btn btn-warning">Edit</i></a>
 						<a href="{{route('item.show',$item->id)}}"
 							class="btn btn-primary">Detail</span>

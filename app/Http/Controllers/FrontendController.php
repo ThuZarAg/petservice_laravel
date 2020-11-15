@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Service_type;
+
 use App\Item;
+
 
 class FrontendController extends Controller
 {
@@ -21,7 +23,8 @@ class FrontendController extends Controller
     }
     public function shop($value='')
     {
-    	return view ('frontend.shop');
+        $categories = Category::all();
+    	return view ('frontend.shop',compact('categories'));
     }
     public function contact($value='')
     {
