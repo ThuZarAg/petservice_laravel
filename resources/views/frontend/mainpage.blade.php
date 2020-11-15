@@ -104,7 +104,7 @@
           @foreach($categories as $row)
         <div class="col-lg-2 col-md-3 col-sm-6 ml-4">
           <div class="card" >
-            <a href="#"><img class="card-img-top img-fluid" style="height:250px;" src="{{asset($row->photo)}}" alt="" ></a>
+            <a href="#"><img class="card-img-top img-fluid" src="{{asset($row->photo)}}" alt="" ></a>
             <div class="card-body">
               <h4 class="card-title" style="font-size: 13px;">
                 <a href="#">{{$row->name}}</a>
