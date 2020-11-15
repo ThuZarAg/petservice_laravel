@@ -23,6 +23,7 @@
 				<tr>
 					<th>No</th>
 					<th>Code No</th>
+					<th>Photo</th>
 					<th>Name</th>
 					<th>Price</th>
 					<th colspan="2">Action</th>
@@ -36,6 +37,7 @@
 				<tr>
 					<td>{{$i++}}</td>
 					<td>{{$item->codeno}}</td>
+					<td><img src="{{ $item->photo }}" class="img-fluid" style=" width:55px;"></td>
 					<td>{{$item->name}}</td>
 					<td>
 	                  	@if($item->discount > 0)
