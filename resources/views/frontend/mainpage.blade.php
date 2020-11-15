@@ -72,49 +72,26 @@
 
 <!-- ======= Features Section ======= -->
 <div class="row mt-5">
-      <h1> Discount Item </h1>
-    </div>
-
-      <!-- Disocunt Item -->
-    <div class="row">
-      
-    @foreach($items as $item)
-
-    <div class="col-12">
-     
-      <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
-         @if($item->discount>0)
-        <div class="MultiCarousel-inner">
+  <h1> Discount Item </h1>
+</div>
+<!-- Disocunt Item -->
+<div class="row">
+  @foreach($items as $item)
+  <div class="col-12">    
+    <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+     @if($item->discount>0)
+     <div class="MultiCarousel-inner">
        <img src="{{$item->photo}}">
-        </div>
+     </div>
      {{number_format($item->discount)}}
 
      <del>{{$item->price}}</del>
      <p>{{$item->name}}</p>
-       @endif
-      </div>
+     @endif
+   </div>
  </div>
  @endforeach
 </div>
-<div class="row">
-      <div class="col-md-12 mt-4">
-        <h3 class="text-center mb-5">DOG SUPPLIES</h3>
-      </div>
-      <div class="row offset-md-1">
-          @foreach($categories as $row)
-        <div class="col-lg-2 col-md-3 col-sm-6 ml-4">
-          <div class="card" >
-            <a href="#"><img class="card-img-top img-fluid" src="{{asset($row->photo)}}" alt="" ></a>
-            <div class="card-body">
-              <h4 class="card-title" style="font-size: 13px;">
-                <a href="#">{{$row->name}}</a>
-              </h4>
-            </div>
-          </div>
-      </div>
-      @endforeach
-    </div>
-  </div>
 
 
 
