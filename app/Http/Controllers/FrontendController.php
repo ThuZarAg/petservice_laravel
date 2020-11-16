@@ -91,7 +91,10 @@ class FrontendController extends Controller
     {
         $sid = $request->sid;
         $packages = Package::where('servicetype_id',$sid)->get();
+        return $packages;
      
     }
+
+   
 
 }
