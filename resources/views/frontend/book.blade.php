@@ -88,11 +88,7 @@
           <input type="text" class="form-control" id="exampleFormControlInput5" name="date" placeholder="Start Date">
         </div>
 
-<<<<<<< HEAD
-        <button class="btn btn-outline-danger book">Book</button>
-=======
        <a href="{{route('book')}}"class="btn btn-outline-danger my-3">Request Consult<i class="far fa-hand-peace ml-2"></i></a>
->>>>>>> f9e9f7a1c8a5301e2d1b30124bb5685945cbf821
 
       </form>
     </div>
@@ -115,7 +111,7 @@
         let serviceid = $(this).val();
         //alert(serviceid);
         $.post("{{route('filterService')}}",{sid:serviceid},function (response) {
-          // console.log(response);
+           console.log(response);
           var html = "";
           for(let row of response){
             html+=`<option value="${row.id}">${row.name}</option>`;
@@ -128,26 +124,5 @@
   </script>
   @endsection
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('.book').on('click',function(){
-
-        $.ajaxSetup({
-          headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-          }
-        });
-   // alert('ok');
-       // console.log(notes);
-       var order = localStorage.getItem("item");
-
-       $.post("/order",{order:order,notes:notes},function (response) {
-        console.log(response);
-      })
-
-
-     });
-    });
-  </script>
-  @endsection
+ 
 
