@@ -192,15 +192,9 @@ $(document).ready(function(){
                 var itemString = localStorage.getItem("itemlist");  
                 var itemArray = JSON.parse(itemString);
                   
-                $.each(itemArray,function (i,v){  
-                    if (i == id) {  
-                        v.qty++;  
-                    }
-                      
-                })  
-
-                cart = JSON.stringify(itemArray);  
-                localStorage.setItem("itemlist",cart);  
+                itemArray[id].qty++;
+                var itemString = JSON.stringify(itemArray);
+                localStorage.setItem("itemlist",itemString);  
                 showTable();  
                 cartnoti();  
             })
