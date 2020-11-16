@@ -100,15 +100,15 @@
       <div class="container">
        <div class="section-title">
         <h2>Our Services</h2>
-        <p class="mt-3" style="font-size:20px;">Our services are geared towards meeting your dog’s unique needs and ensuring that your attention can be where you need it to be. When you know that your dog has been ran, walked, fed, relieved, and entertained, you can be present at work or wherever you need to be.</p>
+        <p class="mt-3" style="font-size:18px;">Our services are geared towards meeting your dog’s unique needs and ensuring that your attention can be where you need it to be. When you know that your dog has been ran, walked, fed, relieved, and entertained, you can be present at work or wherever you need to be.</p>
       </div>
 
       <div class="row mt-5">
         @foreach($service_types as $row)
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" >
+       <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" >
           <div class="icon-box icon-box-pink">
             <div class=""><img src="{{$row->photo}}" style="border-radius: 50%;height: 80px; width:80px;"class="img-fluid mb-4"></div>
-            <h4 class="title"><a href="">{{$row->name}}</a></h4>
+            <h4 class="title"><a href="{{route('package',$row->id)}}">{{$row->name}}</a></h4>
             <p class="description">{{substr($row->description, 0,88)}}...</p>
           </div>
 
