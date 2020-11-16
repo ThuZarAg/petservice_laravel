@@ -57,42 +57,42 @@
         <div class="form-group">
           <label for="exampleFormControlTextarea3">What service do you need?</label>
           <select name="service" class="form-control" id="exampleFormControlSelect1">
-            
-              @foreach($service_types as $service)
-              <option value="{{$service->id}}">{{$service->name}}</option>
-              @endforeach
+
+            @foreach($service_types as $service)
+            <option value="{{$service->id}}">{{$service->name}}</option>
+            @endforeach
             
           </select>
         </div>
 
         <div class="form-group">
-              <label>Which package do you need?</label>
-              <select name="package" class="form-control package" disabled="true">
-                <optgroup label="Choose Package" class="package_option">
-                  @foreach($packages as $package)
-                  <option value="{{$package->id}}">{{$package->name}}</option>
-                  @endforeach
-                </optgroup>
-              </select>
-            </div>
+          <label>Which package do you need?</label>
+          <select name="package" class="form-control package" disabled="true">
+            <optgroup label="Choose Package" class="package_option">
+              @foreach($packages as $package)
+              <option value="{{$package->id}}">{{$package->name}}</option>
+              @endforeach
+            </optgroup>
+          </select>
+        </div>
         
         <div class="form-group">
           <label for="exampleFormControlInput5">Please write which date you want to start</label>
           <input type="text" class="form-control" id="exampleFormControlInput5" name="date" placeholder="Start Date">
         </div>
 
-        <button class="btn btn-outline-danger">Book</button>
+        <button class="btn btn-outline-danger book">Book</button>
 
       </form>
     </div>
   </main>
 
- @endsection
+  @endsection
 
- @section('script')
+  @section('script')
   <script type="text/javascript">
     $(document).ready(function () {
-        
+
       $.ajaxSetup({
         headers: {
           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -115,4 +115,30 @@
       })
     })
   </script>
-@endsection
+  @endsection
+
+  @section('script')
+  <script type="text/javascript" src="{{asset('js/custom.js')}}"></script>
+  @endsection
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.book').on('click',function(){
+
+        $.ajaxSetup({
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+        });
+   // alert('ok');
+       // console.log(notes);
+       var order = localStorage.getItem("item");
+
+       $.post("/order",{order:order,notes:notes},function (response) {
+        console.log(response);
+      })
+
+
+     });
+    });
+  </script>
