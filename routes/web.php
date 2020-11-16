@@ -35,6 +35,9 @@ Route::get('servicedetail/{id}', 'FrontendController@package')->name('package');
 
 Route::get('book', 'FrontendController@book')->name('book');
 
+Route::post('filter', 'FrontendController@filterService')->name('filterService');
+
+
 Route::get('shop', 'FrontendController@shop')->name('shoppage');
 
 Route::get('itemsbysubcategory/{id}', 'FrontendController@itemsbysubcategory')->name('itemsbysubcategory');
