@@ -59,7 +59,7 @@
 
 
 {{-- @section('script')
-<script type="text/javascript" src="{{asset('my_asset/js/custom.js')}}"></script>
+<script type="text/javascript" src="{{asset('asset/js/custom.js')}}"></script>
   <script type="text/javascript">
     $(document).ready(function () {
       $.ajaxSetup({

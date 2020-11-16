@@ -8,6 +8,7 @@ use App\Category;
 use App\Subcategory;
 use App\Item;
 use App\Package;
+use App\Booking;
 
 
 class FrontendController extends Controller
@@ -30,6 +31,13 @@ class FrontendController extends Controller
         $servicedetails = Package::where('servicetype_id', $id)->get();
         //dd($servicedetails);
         return view ('frontend.package',compact('servicedetails'));
+    }
+
+    public function book($value='')
+    {   
+       $service_types = Service_type::all();
+       $packages = Package::all();
+        return view ('frontend.book',compact('service_types','packages'));
     }
 
     public function shop($value='')
@@ -65,6 +73,7 @@ class FrontendController extends Controller
         return view('frontend.cartpage');
     }
 
+
     public function signin($value='')
     {
         return view('frontend.signinpage');
@@ -73,6 +82,12 @@ class FrontendController extends Controller
     public function signup($value='')
     {
         return view('frontend.signuppage');
+
+    public function filterService(Request $request)
+    {
+        $sid = $request->sid;
+        $packages = Package::where('servicetype_id',$sid)->get();
+     
     }
 
 }
