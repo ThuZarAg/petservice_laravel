@@ -29,8 +29,15 @@
 </header><!-- End Header -->
 
 <main id="main">
+  <div class="jumbotron jumbotron-fluid subtitle">
+    <div class="container">
+      <h1 class="text-center text-white">We’re Excited to Meet You! <i class="fas fa-hand-holding-heart ml-2"></i></h1>
+    </div>
+  </div>
   <div class="container my-5">
-
+    <div class="my-5 text-center">
+      <h3 class="">Please Fill Everything Correctly</h3>
+    </div>
     <form>
       <div class="form-group">
         <label for="exampleFormControlInput1">Please write your name here</label>
@@ -81,7 +88,11 @@
           <input type="text" class="form-control" id="exampleFormControlInput5" name="date" placeholder="Start Date">
         </div>
 
+<<<<<<< HEAD
         <button class="btn btn-outline-danger book">Book</button>
+=======
+       <a href="{{route('book')}}"class="btn btn-outline-danger my-3">Request Consult<i class="far fa-hand-peace ml-2"></i></a>
+>>>>>>> f9e9f7a1c8a5301e2d1b30124bb5685945cbf821
 
       </form>
     </div>
@@ -117,10 +128,6 @@
   </script>
   @endsection
 
-  @section('script')
-  <script type="text/javascript" src="{{asset('js/custom.js')}}"></script>
-  @endsection
-
   <script type="text/javascript">
     $(document).ready(function () {
       $('.book').on('click',function(){
@@ -142,3 +149,5 @@
      });
     });
   </script>
+  @endsection
+

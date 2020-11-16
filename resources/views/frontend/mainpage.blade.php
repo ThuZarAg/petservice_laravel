@@ -21,7 +21,7 @@
         <li><a href="{{route('shoppage')}}">Shop</a></li>
         <li><a href="{{route('contactpage')}}">Contact Us</a></li>
        <li><a href="{{route('cartpage')}}">Cart<i class="icofont-shopping-cart"></i><span class="badge badge-light badge-notify cartNotistyle cartnoti ml-2"></span></a></li>
-        <li><a href="#">Sign In</a></li>
+        <li><a href="{{route('signinpage')}}">Sign In</a></li>
       </ul>
     </nav><!-- .nav-menu -->
 
@@ -35,7 +35,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Mr.Pet !</span></h2>
+          <h2 class="animate__animated animate__fadeInDown">Welcome to Mr.Pet !</h2>
           <p class="animate__animated animate__fadeInUp">“We are providing Pet training Services and accessories & food for your pets.”</p>
           <a href="" class="btn-get-started animate__animated animate__fadeInUp">Click for Register</a>
         </div>
@@ -55,7 +55,7 @@
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">We’re here when you need us.</h2>
           <p class="animate__animated animate__fadeInUp">“Dogs are not our whole life, but they make our lives whole.”</p>
-          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Click for Register</a>
+          <a href="{{route('signuppage')}}" class="btn-get-started animate__animated animate__fadeInUp">Click for Register</a>
         </div>
       </div>
 
@@ -79,7 +79,7 @@
       <div class="container">
        <div class="section-title">
         <h2>Our Services</h2>
-        <p class="mt-3a">Our services are geared towards meeting your dog’s unique needs and ensuring that your attention can be where you need it to be. When you know that your dog has been ran, walked, fed, relieved, and entertained, you can be present at work or wherever you need to be.</p>
+        <p class="mt-3" style="font-size:20px;">Our services are geared towards meeting your dog’s unique needs and ensuring that your attention can be where you need it to be. When you know that your dog has been ran, walked, fed, relieved, and entertained, you can be present at work or wherever you need to be.</p>
       </div>
 
       <div class="row mt-5">

@@ -85,7 +85,7 @@
 
 <div class="my-5 text-center">
 	<h3 class="">We Always Start With A Consult For New Dogs</h3>
-	<button class="btn btn-outline-danger my-3">Book A Consult Now</button>
+	<a href="{{route('book')}}"class="btn btn-outline-danger my-3">Click Here For Book<i class="far fa-hand-peace ml-2"></i></a>
 </div>
 </main>
 

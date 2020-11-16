@@ -73,11 +73,21 @@ class FrontendController extends Controller
         return view('frontend.cartpage');
     }
 
+
+    public function signin($value='')
+    {
+        return view('frontend.signinpage');
+    }
+
+    public function signup($value='')
+    {
+        return view('frontend.signuppage');
+
     public function filterService(Request $request)
     {
         $sid = $request->sid;
         $packages = Package::where('servicetype_id',$sid)->get();
-        return $packages;
+     
     }
 
 }
