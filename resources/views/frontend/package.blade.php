@@ -34,6 +34,7 @@
 
 		<div class="row col-md-12">
 			<div class="full-width-image">
+        {{-- @foreach($servicedetails as $row) --}}
 				<img src="{{ asset('frontend_asset/images/services/dogjog.jpg') }}" alt="..." class="img-fluid" >
 
 			</div>
