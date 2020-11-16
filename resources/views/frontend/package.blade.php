@@ -40,6 +40,8 @@
 </section><!-- End Hero No Slider Sectio -->
 
 
+<!-- ======= Service Details Section ======= -->
+<section class="service-details">
 <div class="container">
   <div class="col-md-12 body">
     <div class="package-column">
