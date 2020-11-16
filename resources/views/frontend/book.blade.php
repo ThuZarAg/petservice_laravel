@@ -29,8 +29,15 @@
 </header><!-- End Header -->
 
 <main id="main">
+  <div class="jumbotron jumbotron-fluid subtitle">
+    <div class="container">
+      <h1 class="text-center text-white">We’re Excited to Meet You! <i class="fas fa-hand-holding-heart ml-2"></i></h1>
+    </div>
+  </div>
   <div class="container my-5">
-
+    <div class="my-5 text-center">
+      <h3 class="">Please Fill Everything Correctly</h3>
+    </div>
     <form>
       <div class="form-group">
         <label for="exampleFormControlInput1">Please write your name here</label>
@@ -57,42 +64,42 @@
         <div class="form-group">
           <label for="exampleFormControlTextarea3">What service do you need?</label>
           <select name="service" class="form-control" id="exampleFormControlSelect1">
-            
-              @foreach($service_types as $service)
-              <option value="{{$service->id}}">{{$service->name}}</option>
-              @endforeach
+
+            @foreach($service_types as $service)
+            <option value="{{$service->id}}">{{$service->name}}</option>
+            @endforeach
             
           </select>
         </div>
 
         <div class="form-group">
-              <label>Which package do you need?</label>
-              <select name="package" class="form-control package" disabled="true">
-                <optgroup label="Choose Package" class="package_option">
-                  @foreach($packages as $package)
-                  <option value="{{$package->id}}">{{$package->name}}</option>
-                  @endforeach
-                </optgroup>
-              </select>
-            </div>
+          <label>Which package do you need?</label>
+          <select name="package" class="form-control package" disabled="true">
+            <optgroup label="Choose Package" class="package_option">
+              @foreach($packages as $package)
+              <option value="{{$package->id}}">{{$package->name}}</option>
+              @endforeach
+            </optgroup>
+          </select>
+        </div>
         
         <div class="form-group">
           <label for="exampleFormControlInput5">Please write which date you want to start</label>
           <input type="text" class="form-control" id="exampleFormControlInput5" name="date" placeholder="Start Date">
         </div>
 
-        <button class="btn btn-outline-danger">Book</button>
+       <a href="{{route('book')}}"class="btn btn-outline-danger my-3">Request Consult<i class="far fa-hand-peace ml-2"></i></a>
 
       </form>
     </div>
   </main>
 
- @endsection
+  @endsection
 
- @section('script')
+  @section('script')
   <script type="text/javascript">
     $(document).ready(function () {
-        
+
       $.ajaxSetup({
         headers: {
           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -115,4 +122,4 @@
       })
     })
   </script>
-@endsection
+  @endsection

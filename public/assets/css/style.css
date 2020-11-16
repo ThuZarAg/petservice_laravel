@@ -16,7 +16,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6, .font-primary {
-  font-family: "Roboto", sans-serif;
+  font-family: Montserrat_Regular;
 }
 
 /*--------------------------------------------------------------
@@ -123,7 +123,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   padding: 10px 15px;
   transition: 0.3s;
   font-size: 18px;
-  font-family: "Open Sans", sans-serif;
+  font-family: Montserrat_Light;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
@@ -318,6 +318,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   overflow: hidden;
   position: relative;
   font-size: 22px;
+  font-family: Montserrat_Regular;
 }
 
 #hero::after {
@@ -360,6 +361,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 #hero h2 {
+  font-family: Montserrat_Regular;
   color: #fff;
   margin-bottom: 30px;
   font-size: 48px;
@@ -372,6 +374,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   animation-delay: 0.4s;
   margin: 0 auto 30px auto;
   color: #fff;
+  font-family: Montserrat_Regular;
 }
 
 #hero .carousel-control-prev, #hero .carousel-control-next {
@@ -2354,6 +2357,7 @@ section {
 /*Discount*/
 *{
     font-family: Montserrat_Regular;
+    font-size:20px;
 }
 
 .logoimg{
@@ -2393,6 +2397,11 @@ section {
 .subtitle{
     /*background-color: #F49FB9 !important;*/
     background-image: linear-gradient(-90deg,  rgba(237, 126, 111,0.2),  rgba(237, 126, 111,0.8));
+    font-family:Montserrat_Regular;
+}
+.subtitle h1{
+    
+    font-family:Montserrat_Regular;
 }
 .navslidemenu{
     border: 1px solid #ef3b68;
