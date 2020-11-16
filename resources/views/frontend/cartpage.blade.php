@@ -70,13 +70,13 @@
                 </td>
 
                 <td>
-                  {{-- @role('customer') --}}
+                  @role('customer')
                     <button class="btn btn-success btn-block mainfullbtncolor checkoutbtn"> Check Out 
                     </button>
-                  {{-- @else
+                  @else
                     <a href="{{route('signinpage')}}" class="btn btn-success btn-block mainfullbtncolor checkoutbtn">
                     Sign in To Checkout</a>       
-                  @endrole --}}
+                  @endrole
                 </td>
 
             </tr>

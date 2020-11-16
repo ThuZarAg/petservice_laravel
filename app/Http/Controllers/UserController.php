@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-// use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -57,7 +57,7 @@ class UserController extends Controller
         $user->assignRole('customer');
 
         // login
-        //Auth::login($user);
+        Auth::login($user);
 
         // redirect
         return redirect()->route('mainpage');
