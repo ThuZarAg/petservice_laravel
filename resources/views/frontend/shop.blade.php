@@ -20,6 +20,7 @@
         <ol>
           <li><a href="{{route('mainpage')}}">Home</a></li>
           <li>Shop</li>
+          <li><a href="{{route('cartpage')}}">Cart<i class="icofont-shopping-cart"></i><span class="badge badge-light badge-notify cartNotistyle cartnoti ml-2"></span></a></li>
         </ol>
       </div>
 
@@ -51,10 +52,8 @@
       </div>
 
     </div>
-   
-
+   </div>
   </div>
-</div>
 </main>
 @endsection
 
