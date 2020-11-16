@@ -111,7 +111,7 @@
         let serviceid = $(this).val();
         //alert(serviceid);
         $.post("{{route('filterService')}}",{sid:serviceid},function (response) {
-          // console.log(response);
+           console.log(response);
           var html = "";
           for(let row of response){
             html+=`<option value="${row.id}">${row.name}</option>`;
@@ -123,3 +123,6 @@
     })
   </script>
   @endsection
+
+ 
+

@@ -18,8 +18,9 @@
 				<div class="d-flex justify-content-between align-items-center">
 					<h2 style="margin-left: 20px;">Packages</h2>
 					<ol>
-						<li><a href="{{route('mainpage')}}">Home</a></li>
-						<li>Packages</li>
+            <li><a href="{{route('mainpage')}}">Home</a></li>
+						<li><a href="{{route('servicepage')}}">Back to Service</a></li>
+						
 					</ol>
 				</div>
 

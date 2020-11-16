@@ -140,8 +140,8 @@ $(document).ready(function(){
                     </td>
                     <td>`;
                     if (discount > 0){
-                        mytable += `<p class=""> ${discount} Ks </p>
-                        <p class="text-danger font-weight-lighter"> <del> ${price} Ks
+                        mytable += `<h5 class="text-danger"> ${discount} Ks </h5>
+                        <p class="font-weight-lighter"> <del> ${price} Ks
                         </del> </p>`
 
                     }
@@ -192,9 +192,15 @@ $(document).ready(function(){
                 var itemString = localStorage.getItem("itemlist");  
                 var itemArray = JSON.parse(itemString);
                   
-                itemArray[id].qty++;
-                var itemString = JSON.stringify(itemArray);
-                localStorage.setItem("itemlist",itemString);  
+                $.each(itemArray,function (i,v){  
+                    if (i == id) {  
+                        v.qty++;  
+                    }
+                      
+                })  
+
+                cart = JSON.stringify(itemArray);  
+                localStorage.setItem("itemlist",cart);  
                 showTable();  
                 cartnoti();  
             })
@@ -310,7 +316,7 @@ $(document).ready(function(){
 
     });
 
-    
+   
 
     
 
