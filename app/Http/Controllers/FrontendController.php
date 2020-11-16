@@ -82,7 +82,7 @@ class FrontendController extends Controller
     public function signup($value='')
     {
         return view('frontend.signuppage');
-
+    }
     public function filterService(Request $request)
     {
         $sid = $request->sid;

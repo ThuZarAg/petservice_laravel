@@ -61,3 +61,11 @@ Route::resource('user', 'UserController');
 Auth::routes(['register'=>false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
