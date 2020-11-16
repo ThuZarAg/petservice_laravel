@@ -3,7 +3,34 @@
 @section('content')
   <!-- Subcategory Title -->
 
+<!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-nontransparent">
+    <div class="container" >
 
+      <div class="logo float-left">
+       <!--  <h1 class="text-light"><a href="index.html"><img src="../../img/logo1.jpg" alt="Logo" class="img-fluid"></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+         <a href="index.html"><img src="{{asset('assets/img/logo2.png')}}" alt="Logo" class="img-fluid" ></a>
+           
+      </div>
+
+     <section class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2 style="margin-left: 20px;">Our Shop</h2>
+        <ol>
+          <li><a href="{{route('mainpage')}}">Home</a></li>
+          <li>Shop</li>
+          <li><a href="{{route('cartpage')}}">Cart<i class="icofont-shopping-cart"></i><span class="badge badge-light badge-notify cartNotistyle cartnoti ml-2"></span></a></li>
+        </ol>
+      </div>
+
+    </div>
+   </section><!-- End Our Services Section -->
+    </div>
+  </header><!-- End Header -->
+  <main id="main">
   <div class="jumbotron jumbotron-fluid subtitle">
       <div class="container">
         <h1 class="text-center text-white"> Your Shopping Cart </h1>
@@ -38,8 +65,6 @@
             </div>
                       
             <tr>
-
-              
                 <td colspan="4">
                 <textarea class="form-control notes" placeholder="Any Request..." required></textarea>
                 </td>
@@ -88,7 +113,7 @@
     </div>
   </form>
   </div>
- 
+ </main>
 
 @endsection
 

@@ -18,7 +18,7 @@
       	@endif
       </h6>
       <a href="{{route('itemdetail',$item->id)}}" class="btn btn-outline-danger mt-3" >Detail</a>
-      <a href="{{route('cartpage')}}" class="btn btn-outline-danger mt-3" > Cart</a>
+      <button class="btn btn-outline-danger addtocart mt-3"  data-id="{{$item->id}}" data-photo="{{asset($item->photo)}}" data-name="{{$item->name}}" data-price="{{$item->price}}" data-discount="{{$item->discount}}" data-name="{{$item->name}}" data-price="{{$item->price}}"> Cart</button>
       
     </div>
    

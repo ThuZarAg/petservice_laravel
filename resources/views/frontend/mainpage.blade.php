@@ -20,7 +20,8 @@
         <!-- <li><a href="blog.html">Blog</a></li> -->
         <li><a href="{{route('shoppage')}}">Shop</a></li>
         <li><a href="{{route('contactpage')}}">Contact Us</a></li>
-        <li><a href="{{route('cartpage')}}">Cart<i class="icofont-shopping-cart"></i><span class="badge badge-pill badge-light badge-notify cartNotistyle cartnoti"></span></a></li>
+       <li><a href="{{route('cartpage')}}">Cart<i class="icofont-shopping-cart"></i><span class="badge badge-light badge-notify cartNotistyle cartnoti ml-2"></span></a></li>
+        <li><a href="#">Sign In</a></li>
       </ul>
     </nav><!-- .nav-menu -->
 
@@ -106,7 +107,7 @@
   <div class="row mt-4 ">
 
     @foreach($items as $item)
-    <x-item-component :item="$item"></x-item-component>
+    <x-item-component :item="$item"></x-item-component> 
     @endforeach
   </div>
 

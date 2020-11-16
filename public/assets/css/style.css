@@ -65,10 +65,10 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   background: none;
 }
 #header.header-nontransparent {
-  background: rgba(237, 126, 111, 0.1);
+  background: linear-gradient(-90deg,  rgba(237, 126, 111,0.2),  rgba(237, 126, 111,0.8));;
 }
 #header.header-scrolled {
-  background: rgba(237, 126, 111, 0.8);
+  background: linear-gradient(-90deg,  rgba(237, 126, 111,0.2),  rgba(237, 126, 111,0.8));;
   height: 70px;
   padding: 10px 0;
 }
@@ -474,14 +474,15 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   top: 0;
   right: 0;
   bottom: 0;
-  /*background: linear-gradient(to right, rgba(30, 67, 86, 0.8), rgba(30, 67, 86, 0.6)), url("../img/hero-bg.jpg") center top no-repeat;*/
+  background: url("../img/P1.jpg") center top no-repeat;
 }
 
 #hero-no-slider h2 {
   color: #fff;
   margin-bottom: 15px;
-  font-size: 48px;
+  font-size: 55px;
   font-weight: 700;
+  word-spacing: 10px;
 }
 
 #hero-no-slider p {
@@ -525,7 +526,7 @@ section {
 }
 
 .section-bg {
-  background-color: rgba(237, 126, 111, 0.1);
+  background-image:linear-gradient(-90deg,  rgba(237, 126, 111,0.2),  rgba(237, 126, 111,0.8));
 }
 
 .section-title {
@@ -2176,7 +2177,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background:rgba(237, 126, 111, 0.5);
+  background:linear-gradient(-90deg,  rgba(237, 126, 111,0.3),  rgba(237, 126, 111,0.8));
   padding: 0 0 0px 0;
   color: #fff;
   font-size: 14px;
@@ -2231,7 +2232,7 @@ section {
 }
 
 #footer .footer-top {
-  background: rgba(237, 126, 111, 0.5);
+  background: linear-gradient(-90deg,  rgba(237, 126, 111,0.2),  rgba(237, 126, 111,0.8));
   border-top: 1px solid rgba(237, 126, 111, 0.5);
   border-bottom: 1px solid rgba(237, 126, 111, 0.5);
   padding: 60px 0 30px 0;
@@ -2391,7 +2392,7 @@ section {
 
 .subtitle{
     /*background-color: #F49FB9 !important;*/
-    background-image: linear-gradient(-90deg, #E2335E, #F49FB9);
+    background-image: linear-gradient(-90deg,  rgba(237, 126, 111,0.2),  rgba(237, 126, 111,0.8));
 }
 .navslidemenu{
     border: 1px solid #ef3b68;
@@ -3223,13 +3224,67 @@ button.btnMain:hover{
     top: 30px;
     transform: rotate(45deg);
 }
-
+/*Shopping Card*/
 .card-img-top {
     width: 100%;
     height: 15vw;
     object-fit: cover;
 }
-
 .card{
   border:none;
+}
+
+/*Package*/
+.body {
+    line-height: 40px;
+    font-size: calc(18px + 4 * (100vw - 320px) / 1046);
+}
+.package-column {
+    margin-top: calc(25px + 25 * (100vw - 320px) / 1046);
+}
+.package-column {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 770px;
+    margin-top: 25px;
+}
+
+/*Package Table*/
+h4 {
+    margin: 18px 0;
+    margin-top: 18px;
+    font-size: 25px;
+    line-height: 35px;
+    color: #b54022;
+    letter-spacing: 1px;
+}
+
+.tablepress thead th {
+    background-color: rgba(237, 126, 111,0.8);
+    font-weight: 600;
+    vertical-align: middle;
+}
+.tablepress thead th {
+    border-bottom: 1px solid #ddd;
+}
+.tablepress {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.tablepress tbody{
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.tablepress td, .tablepress th {
+    padding: 8px;
+    border: none;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    background: 0 0;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: left;
+    float: none !important;
 }
