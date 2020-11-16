@@ -140,8 +140,8 @@ $(document).ready(function(){
                     </td>
                     <td>`;
                     if (discount > 0){
-                        mytable += `<h5 class="text-danger"> ${discount} Ks </h5>
-                        <p class="font-weight-lighter"> <del> ${price} Ks
+                        mytable += `<p class=""> ${discount} Ks </p>
+                        <p class="text-danger font-weight-lighter"> <del> ${price} Ks
                         </del> </p>`
 
                     }

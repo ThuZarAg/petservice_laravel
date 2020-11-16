@@ -49,3 +49,12 @@ Route::get('about', 'FrontendController@about')->name('aboutpage');
 
 Route::resource('order', 'OrderController');
 Route::post('confirm/{id}', 'OrderController@confirm')->name('order.confirm');
+
+Route::get('signin', 'FrontendController@signin')->name('signinpage');
+Route::get('signup', 'FrontendController@signup')->name('signuppage');
+
+Route::resource('user', 'UserController');
+
+Auth::routes(['register'=>false]);
+
+Route::get('/home', 'HomeController@index')->name('home');

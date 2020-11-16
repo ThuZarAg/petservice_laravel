@@ -21,7 +21,7 @@
         <li><a href="{{route('shoppage')}}">Shop</a></li>
         <li><a href="{{route('contactpage')}}">Contact Us</a></li>
        <li><a href="{{route('cartpage')}}">Cart<i class="icofont-shopping-cart"></i><span class="badge badge-light badge-notify cartNotistyle cartnoti ml-2"></span></a></li>
-        <li><a href="#">Sign In</a></li>
+        <li><a href="{{route('signinpage')}}">Sign In</a></li>
       </ul>
     </nav><!-- .nav-menu -->
 
@@ -55,7 +55,7 @@
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">We’re here when you need us.</h2>
           <p class="animate__animated animate__fadeInUp">“Dogs are not our whole life, but they make our lives whole.”</p>
-          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Click for Register</a>
+          <a href="{{route('signuppage')}}" class="btn-get-started animate__animated animate__fadeInUp">Click for Register</a>
         </div>
       </div>
 
