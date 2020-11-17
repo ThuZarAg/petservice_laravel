@@ -6,6 +6,7 @@ $(document).ready(function(){
 
         $('.addtocart').on('click', function(){
 
+            //alert("ok");
             var id = $(this).data('id');
             var codeno = $(this).data('codeno');
             var name = $(this).data('name');
