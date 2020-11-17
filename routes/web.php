@@ -18,15 +18,17 @@ use Illuminate\Support\Facades\Route;
 // });
 
 //CRUD(Backend)
-Route::resource('category','CategoryController');
-Route::resource('subcategory','SubcategoryController');
-Route::resource('item','ItemController');
-Route::resource('servicetype','ServicetypeController');
-Route::resource('package','PackageController');
-
+Route::middleware('role:admin')->group(function () {
+	Route::resource('category','CategoryController');
+	Route::resource('subcategory','SubcategoryController');
+	Route::resource('item','ItemController');
+	Route::resource('servicetype','ServicetypeController');
+	Route::resource('package','PackageController');
+});
 
 
 //Frontend
+
 Route::get('/', 'FrontendController@home')->name('mainpage');
 
 Route::get('service', 'FrontendController@service')->name('servicepage');
@@ -36,6 +38,8 @@ Route::get('servicedetail/{id}', 'FrontendController@package')->name('package');
 Route::get('book', 'FrontendController@book')->name('book');
 
 Route::post('filter', 'FrontendController@filterService')->name('filterService');
+
+Route::resource('booking', 'BookingController');
 
 
 Route::get('shop', 'FrontendController@shop')->name('shoppage');

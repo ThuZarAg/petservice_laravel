@@ -6,6 +6,7 @@ $(document).ready(function(){
 
         $('.addtocart').on('click', function(){
 
+            //alert("ok");
             var id = $(this).data('id');
             var codeno = $(this).data('codeno');
             var name = $(this).data('name');
@@ -140,8 +141,8 @@ $(document).ready(function(){
                     </td>
                     <td>`;
                     if (discount > 0){
-                        mytable += `<h5 class="text-danger"> ${discount} Ks </h5>
-                        <p class="font-weight-lighter"> <del> ${price} Ks
+                        mytable += `<h5> ${discount} Ks </h5>
+                        <p class="text-danger"> <del> ${price} Ks
                         </del> </p>`
 
                     }
@@ -281,40 +282,42 @@ $(document).ready(function(){
             total += subtotal ++;
         });
 
-        console.log(total);
+        // console.log(total);
 
-        $.post('storeorder.php',{
-            cart: itemArray,
-            notes: notes,
-            total: total
-        },function(response){
-            localStorage.clear();
-            location.href="ordersuccess.php";
-        });
+        // $.post('storeorder.php',{
+        //     cart: itemArray,
+        //     notes: notes,
+        //     total: total
+        // },function(response){
+        //     localStorage.clear();
+        //     location.href="ordersuccess.php";
+        // });
     });
 
-
-    $('.profile_editBtn').show();
-    $('.profile_cancelBtn').hide();
-
-    $('.profile_editBtn').on('click', function(){
-        $("fieldset").removeAttr("disabled");
-        $("#imageUpload").removeAttr("disabled");
-
-        $('.profile_editBtn').hide();
-        $('.profile_cancelBtn').show();
-
-    });
-
-    $('.profile_cancelBtn').on('click', function(){
-        $('#imageUpload').prop('disabled', true);
-        $('fieldset').prop('disabled', true);
+    
 
 
-        $('.profile_editBtn').show();
-        $('.profile_cancelBtn').hide();
+    // $('.profile_editBtn').show();
+    // $('.profile_cancelBtn').hide();
 
-    });
+    // $('.profile_editBtn').on('click', function(){
+    //     $("fieldset").removeAttr("disabled");
+    //     $("#imageUpload").removeAttr("disabled");
+
+    //     $('.profile_editBtn').hide();
+    //     $('.profile_cancelBtn').show();
+
+    // });
+
+    // $('.profile_cancelBtn').on('click', function(){
+    //     $('#imageUpload').prop('disabled', true);
+    //     $('fieldset').prop('disabled', true);
+
+
+    //     $('.profile_editBtn').show();
+    //     $('.profile_cancelBtn').hide();
+
+    // });
 
    
 
