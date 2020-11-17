@@ -83,10 +83,32 @@
         <!-- User Menu-->
         <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>
           <ul class="dropdown-menu settings-menu dropdown-menu-right">
-            <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
-            <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i> Profile</a></li>
-            <li><a class="dropdown-item" href="page-login.html" onclick="event.preventDefault();
-                                   document.getElementById('logout-form').submit();"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+            {{-- <li><a class="dropdown-item" href="#"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fa fa-user fa-lg"></i> Profile</a></li> --}}
+            <li><a class="dropdown-item" href="page-login.html" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+
+             @auth
+            <li>
+              {{-- <a class="dropdown-item" href="#">
+                  {{ Auth::user()->name }}
+              </a> --}}
+
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{ route('logout') }}"
+                     onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">
+                      {{ __('Logout') }}
+                  </a>
+
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                      @csrf
+                  </form>
+              </div>
+          </li>
+          {{-- @else
+            <li><a href="{{route('signinpage')}}">Sign In</a></li> --}}
+          @endauth
+
             <form id="logout-form" action="" method="POST" class="d-none">
                 @csrf
             </form>
@@ -99,7 +121,9 @@
     <aside class="app-sidebar">
       <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
         <div>
-          <p class="app-sidebar__user-name">John Doe</p>
+          <p class="app-sidebar__user-name">
+                  {{ Auth::user()->name }}
+          </p>
           <p class="app-sidebar__user-designation">Frontend Developer</p>
         </div>
       </div>
@@ -116,7 +140,7 @@
 
         <li><a class="app-menu__item {{ Request::is('booking*') ? 'active' : '' }}" href="{{route('package.index')}}"><img src="https://img.icons8.com/nolan/22/purchase-order.png"/><span class="app-menu__label ml-1">Package</span></a></li>
 
-        <li><a class="app-menu__item {{ Request::is('booking*') ? 'active' : '' }}" href=""><img src="https://img.icons8.com/ultraviolet/22/000000/booking.png"/> <span class="app-menu__label ml-1">Booking</span></a></li>
+        <li><a class="app-menu__item {{ Request::is('booking*') ? 'active' : '' }}" href="{{route('booking.index')}}"><img src="https://img.icons8.com/ultraviolet/22/000000/booking.png"/> <span class="app-menu__label ml-1">Booking</span></a></li>
 
         <li><a class="app-menu__item {{ Request::is('booking*') ? 'active' : '' }}" href="{{route('order.index')}}"><img src="https://img.icons8.com/nolan/22/purchase-order.png"/><span class="app-menu__label ml-1">Order</span></a></li>
 
