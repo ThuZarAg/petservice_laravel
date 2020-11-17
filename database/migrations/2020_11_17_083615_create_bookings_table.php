@@ -27,7 +27,6 @@ class CreateBookingsTable extends Migration
             $table->foreign('servicetype_id')
                   ->references('id')->on('service_types')
                   ->onDelete('cascade'); 
-            $table->timestamps();
 
             $table->unsignedBigInteger('package_id');
                           

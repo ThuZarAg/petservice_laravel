@@ -38,7 +38,8 @@
     <div class="my-5 text-center">
       <h3 class="">Please Fill Everything Correctly</h3>
     </div>
-    <form>
+    <form method="POST" action="{{ route('booking.store') }}" class="">
+      @csrf
       <div class="form-group">
         <label for="exampleFormControlInput1">Please write your name here</label>
         <input type="text" class="form-control" id="exampleFormControlInput1" name="ownername" placeholder="Your Name">
@@ -88,7 +89,7 @@
           <input type="text" class="form-control" id="exampleFormControlInput5" name="date" placeholder="Start Date">
         </div>
 
-       <a href="{{route('book')}}"class="btn btn-outline-danger my-3">Request Consult<i class="far fa-hand-peace ml-2"></i></a>
+       <a href=""class="btn btn-outline-danger my-3">Request Consult<i class="far fa-hand-peace ml-2"></i></a>
 
       </form>
     </div>

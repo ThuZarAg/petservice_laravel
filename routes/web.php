@@ -39,6 +39,8 @@ Route::get('book', 'FrontendController@book')->name('book');
 
 Route::post('filter', 'FrontendController@filterService')->name('filterService');
 
+Route::resource('booking', 'BookingController');
+
 
 Route::get('shop', 'FrontendController@shop')->name('shoppage');
 
