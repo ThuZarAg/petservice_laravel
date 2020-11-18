@@ -16,7 +16,7 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2 style="margin-left: 20px;">Our Shop</h2>
+        <h2 style="margin-left: 20px;"></h2>
         <ol>
           <li><a href="{{route('mainpage')}}">Home</a></li>
           <li><a href="{{route('cartpage')}}">Cart<i class="icofont-shopping-cart"></i><span class="badge badge-light badge-notify cartNotistyle cartnoti ml-2"></span></a></li>

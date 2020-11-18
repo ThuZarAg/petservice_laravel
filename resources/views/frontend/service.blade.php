@@ -16,7 +16,7 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2 style="margin-left: 20px;">Our Services</h2>
+        <h2 style="margin-left: 20px;"></h2>
         <ol>
           <li><a href="{{route('mainpage')}}">Home</a></li>
           <li>Services</li>
@@ -63,8 +63,8 @@
     <!-- ======= Service Details Section ======= -->
     <section class="service-details">
       <div class="container">
-
-        <div class="row">
+        <h2 class="my-3 text-center">You can Choose Package as you Like!</h2>
+        <div class="row pt-4">
           @foreach($service_types as $row)
           <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
             <div class="card">

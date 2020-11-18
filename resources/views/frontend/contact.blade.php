@@ -17,10 +17,10 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2 style="margin-left: 20px;">Contact Us</h2>
+        <h2 style="margin-left: 20px;"></h2>
         <ol>
           <li><a href="{{route('mainpage')}}">Home</a></li>
-          <li>Contact</li>
+          <li>Contact Us</li>
         </ol>
       </div>
 
