@@ -52,7 +52,8 @@ class FrontendController extends Controller
     }
     public function about($value='')
     {
-    	return view ('frontend.about');
+          $service_types = Service_type::all();
+    	return view ('frontend.about',compact('service_types'));
     }
 
     public function itemsbysubcategory($id)
@@ -65,7 +66,8 @@ class FrontendController extends Controller
     {
         $item = Item::find($id);
         // dd($item);
-        return view('frontend.itemdetail',compact('item'));
+         $items = Item::take(6)->get();
+        return view('frontend.itemdetail',compact('item','items'));
     }
 
     public function cart($value='')

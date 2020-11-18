@@ -19,13 +19,13 @@
         <h2 style="margin-left: 20px;">{{$item->name}}</h2>
         <ol>
           <li><a href="{{route('mainpage')}}">Home</a></li>
-         <li><a href="{{route('shoppage')}}">All Items</a></li>
-         <li><a href="{{route('cartpage')}}">Cart<i class="icofont-shopping-cart"></i><span class="badge badge-light badge-notify cartNotistyle cartnoti ml-2"></span></a></li>
-       </ol>
-     </div>
+          <li><a href="{{route('shoppage')}}">All Items</a></li>
+          <li><a href="{{route('cartpage')}}">Cart<i class="icofont-shopping-cart"></i><span class="badge badge-light badge-notify cartNotistyle cartnoti ml-2"></span></a></li>
+        </ol>
+      </div>
 
-   </div>
- </section><!-- End Our Services Section -->
+    </div>
+  </section><!-- End Our Services Section -->
 </div>
 </header><!-- End Header -->
 
@@ -61,9 +61,45 @@
         {{-- <a href="{{route('cartpage')}} " class="btn btn-success addtocart" data-id="{{$item->id}}" data-photo="{{asset($item->photo)}}" data-name="{{$item->name}}" data-price="{{$item->price}}">Add To Cart</a> --}}
         <a href="{{route('cartpage')}}" class="btn btn-success addtocart" data-id="{{$item->id}}" data-photo="{{asset($item->photo)}}" data-name="{{$item->name}}" data-price="{{$item->price}}" data-discount="{{$item->discount}}">Buy Now</a>
       </div>
+
+  
+
+
     </div>
+
 </div>
+<div class="col-lg-12">
+  <h2 class="mt-3">Flash Sales</h2>
+<div class="row">
+
+    @foreach($items as $item)
+    <div class="col-lg-2 col-md-6 my-4">
+  <div class="card h-100">
+    <a href="#"><img class="card-img-top" src="{{asset($item->photo)}}" alt=""></a>
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: 14px;">
+        <a href="#">{{$item->name}}</a>
+      </h5>
+      <h6>
+        @if($item->discount > 0)
+          {{number_format($item->discount)}} MMK <br>
+          <del class="text-danger">{{$item->price}} MMK</del>
+        @else
+          {{number_format($item->price)}} MMK
+        @endif
+      </h6>
+      
+      
+    </div>
+   
+  </div>
 </div>
+
+    @endforeach
+  </div>
+  </div>
+</div>
+
 </main>
 @endsection
 
