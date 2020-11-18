@@ -97,6 +97,12 @@ class FrontendController extends Controller
      
     }
 
+
+    public function success($value='')
+    {
+        return view('frontend.bookingsuccess');
+
+}
    
 
 }

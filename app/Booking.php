@@ -9,7 +9,7 @@ class Booking extends Model
     protected $fillable = ['name', 'email', 'phone', 'address', 'petname',
     						 'description', 'servicetype_id', 'package_id', 'start_date'
     ];
-}
+
 
 public function servicetype()
   {
@@ -19,4 +19,6 @@ public function servicetype()
   public function package()
   {
       return $this->belongsTo('App\Package');
+  }
+
   }

@@ -16,10 +16,10 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2 style="margin-left: 20px;">Our Services</h2>
+        <h2 style="margin-left: 20px;"></h2>
         <ol>
           <li><a href="{{route('mainpage')}}">Home</a></li>
-          <li>Services</li>
+          <li>Packages</li>
         </ol>
       </div>
 
@@ -86,10 +86,10 @@
         
         <div class="form-group">
           <label for="exampleFormControlInput5">Please write which date you want to start</label>
-          <input type="text" class="form-control" id="exampleFormControlInput5" name="date" placeholder="Start Date">
+          <input type="date" class="form-control" id="exampleFormControlInput5" name="start_date" placeholder="Start Date">
         </div>
 
-       <a href=""class="btn btn-outline-danger my-3">Request Consult<i class="far fa-hand-peace ml-2"></i></a>
+       <input type="submit" value="Request Consult" class="btn btn-outline-danger my-3">
 
       </form>
     </div>

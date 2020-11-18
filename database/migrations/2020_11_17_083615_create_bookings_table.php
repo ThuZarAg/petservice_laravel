@@ -21,6 +21,7 @@ class CreateBookingsTable extends Migration
             $table->string('address');
             $table->string('petname');
             $table->text('description');
+            
 
             $table->unsignedBigInteger('servicetype_id');
                           
@@ -34,6 +35,7 @@ class CreateBookingsTable extends Migration
                   ->references('id')->on('packages')
                   ->onDelete('cascade'); 
 
+            $table->date('start_date');
             
             $table->timestamps();
         });
