@@ -119,7 +119,7 @@
     <!-- Sidebar menu-->
     <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
     <aside class="app-sidebar">
-      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
+      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://media.giphy.com/media/ibeV4GQVV8omuoaOuN/source.mov" alt="User Image">
         <div>
           <p class="app-sidebar__user-name">
                   {{ Auth::user()->name }}
@@ -138,11 +138,11 @@
 
         <li><a class="app-menu__item {{ Request::is('service*') ? 'active' : '' }}" href="{{route('servicetype.index')}}"><img src="https://img.icons8.com/nolan/22/service.png"/> <span class="app-menu__label ml-1">Service</span></a></li>
 
-        <li><a class="app-menu__item {{ Request::is('booking*') ? 'active' : '' }}" href="{{route('package.index')}}"><img src="https://img.icons8.com/nolan/22/purchase-order.png"/><span class="app-menu__label ml-1">Package</span></a></li>
+        <li><a class="app-menu__item {{ Request::is('package*') ? 'active' : '' }}" href="{{route('package.index')}}"><img src="https://img.icons8.com/nolan/22/purchase-order.png"/><span class="app-menu__label ml-1">Package</span></a></li>
 
         <li><a class="app-menu__item {{ Request::is('booking*') ? 'active' : '' }}" href="{{route('booking.index')}}"><img src="https://img.icons8.com/ultraviolet/22/000000/booking.png"/> <span class="app-menu__label ml-1">Booking</span></a></li>
 
-        <li><a class="app-menu__item {{ Request::is('booking*') ? 'active' : '' }}" href="{{route('order.index')}}"><img src="https://img.icons8.com/nolan/22/purchase-order.png"/><span class="app-menu__label ml-1">Order</span></a></li>
+        <li><a class="app-menu__item {{ Request::is('order*') ? 'active' : '' }}" href="{{route('order.index')}}"><img src="https://img.icons8.com/nolan/22/purchase-order.png"/><span class="app-menu__label ml-1">Order</span></a></li>
 
        
       </ul>
