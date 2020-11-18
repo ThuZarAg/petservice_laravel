@@ -62,38 +62,40 @@
         <a href="{{route('cartpage')}}" class="btn btn-success addtocart" data-id="{{$item->id}}" data-photo="{{asset($item->photo)}}" data-name="{{$item->name}}" data-price="{{$item->price}}" data-discount="{{$item->discount}}">Buy Now</a>
       </div>
 
-  
-
-
     </div>
-
 </div>
+
 <div class="col-lg-12">
   <h2 class="mt-3">Flash Sales</h2>
-<div class="row">
+  <div class="row">
 
     @foreach($items as $item)
     <div class="col-lg-2 col-md-6 my-4">
-  <div class="card h-100">
-    <a href="#"><img class="card-img-top" src="{{asset($item->photo)}}" alt=""></a>
-    <div class="card-body">
-      <h5 class="card-title" style="font-size: 14px;">
-        <a href="#">{{$item->name}}</a>
-      </h5>
-      <h6>
-        @if($item->discount > 0)
-          {{number_format($item->discount)}} MMK <br>
-          <del class="text-danger">{{$item->price}} MMK</del>
-        @else
-          {{number_format($item->price)}} MMK
-        @endif
-      </h6>
-      
-      
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="{{asset($item->photo)}}" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 14px;">
+            <a href="#">{{$item->name}}</a>
+          </h5>
+          <h6>
+            @if($item->discount > 0)
+              {{number_format($item->discount)}} MMK <br>
+              <del class="text-danger">{{$item->price}} MMK</del>
+            @else
+              {{number_format($item->price)}} MMK
+            @endif
+          </h6>
+
+          <div class="mt-3">
+          {{-- <a href="{{route('cartpage')}} " class="btn btn-success addtocart" data-id="{{$item->id}}" data-photo="{{asset($item->photo)}}" data-name="{{$item->name}}" data-price="{{$item->price}}">Add To Cart</a> --}}
+          <a href="{{route('cartpage')}}" class="btn btn-success addtocart" data-id="{{$item->id}}" data-photo="{{asset($item->photo)}}" data-name="{{$item->name}}" data-price="{{$item->price}}" data-discount="{{$item->discount}}">Buy Now</a>
+          </div>
+          
+          
+        </div>
+       
+      </div>
     </div>
-   
-  </div>
-</div>
 
     @endforeach
   </div>
@@ -103,6 +105,6 @@
 </main>
 @endsection
 
-@section('script')
+{{-- @section('script')
 <script type="text/javascript" src="{{asset('assets/js/custom.js')}}"></script>
-@endsection
+@endsection --}}
