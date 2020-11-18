@@ -19,7 +19,7 @@
         <h2 style="margin-left: 880px;"></h2>
         <ol>
           <li><a href="{{route('mainpage')}}">Home</a></li>
-          <li><a href="{{route('servicepage')}}">Service</li>
+          <li><a href="{{route('servicepage')}}">Service</a></li>
         </ol>
       </div>
 
