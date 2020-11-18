@@ -116,7 +116,7 @@
 
         <li><a class="app-menu__item {{ Request::is('booking*') ? 'active' : '' }}" href="{{route('package.index')}}"><img src="https://img.icons8.com/nolan/22/purchase-order.png"/><span class="app-menu__label ml-1">Package</span></a></li>
 
-        <li><a class="app-menu__item {{ Request::is('booking*') ? 'active' : '' }}" href=""><img src="https://img.icons8.com/ultraviolet/22/000000/booking.png"/> <span class="app-menu__label ml-1">Booking</span></a></li>
+        <li><a class="app-menu__item {{ Request::is('booking*') ? 'active' : '' }}" href="{{route('booking.index')}}"><img src="https://img.icons8.com/ultraviolet/22/000000/booking.png"/> <span class="app-menu__label ml-1">Booking</span></a></li>
 
         <li><a class="app-menu__item {{ Request::is('booking*') ? 'active' : '' }}" href="{{route('order.index')}}"><img src="https://img.icons8.com/nolan/22/purchase-order.png"/><span class="app-menu__label ml-1">Order</span></a></li>
 

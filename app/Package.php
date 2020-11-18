@@ -13,4 +13,9 @@ class Package extends Model
       return $this->hasMany('App\Service_type');
   }
 
+   public function booking()
+  {
+      return $this->belongsTo('App\Booking');
+  }
+
 }

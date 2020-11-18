@@ -12,4 +12,9 @@ class Service_type extends Model
   {
       return $this->belongsTo('App\Package');
   }
+
+  public function booking()
+  {
+      return $this->belongsTo('App\Booking');
+  }
 }
