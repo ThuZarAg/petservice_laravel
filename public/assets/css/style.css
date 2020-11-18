@@ -218,7 +218,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   left: -260px;
   width: 260px;
   padding-top: 18px;
-  background: #1e4356;
+  background: linear-gradient(-90deg, rgba(237, 126, 111,0.2), rgba(237, 126, 111,0.8));
   transition: 0.4s;
 }
 
@@ -231,7 +231,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 .mobile-nav a {
   display: block;
   position: relative;
-  color: #ddecf5;
+  color: #fff;
   padding: 10px 20px;
   font-weight: 500;
 }
@@ -292,7 +292,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   top: 0;
   left: 0;
   position: fixed;
-  background: rgba(30, 67, 86, 0.9);
+  background: linear-gradient(-90deg, rgba(237, 126, 111,0.2), rgba(237, 126, 111,0.8));
   overflow: hidden;
   display: none;
 }
@@ -2558,12 +2558,10 @@ a.shoppingcartLink i{
 }
 
 span.cartNotistyle{
-    background: #ef3b68;
     position: relative;
     top: -15px;
     left: -13px;
-    border-radius: 25px;
-    color: #fff;
+    color:#ef3b68;
 }
 
 
