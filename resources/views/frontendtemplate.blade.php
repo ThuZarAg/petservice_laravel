@@ -144,6 +144,8 @@
   <script src="{{asset('assets/vendor/aos/aos.js')}}"></script>
   <script type="text/javascript" src="{{asset('assets/js/custom.js')}}"></script>
 
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
   <!-- Template Main JS File -->
   <script src="{{asset('assets/js/main.js')}}"></script>
 

@@ -89,7 +89,7 @@
           <input type="date" class="form-control" id="exampleFormControlInput5" name="start_date" placeholder="Start Date">
         </div>
 
-       <input type="submit" value="Request Consult" class="btn btn-outline-danger my-3">
+       <input type="submit" id="request" value="Request Consult" class="btn btn-outline-danger my-3">
 
       </form>
     </div>
@@ -120,7 +120,8 @@
           $('.package').removeAttr('disabled');
           $('.package_option').html(html);
         })
-      })
+      });
+      $('#request').on('', function () {
     })
   </script>
   @endsection
