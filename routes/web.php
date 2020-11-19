@@ -63,6 +63,10 @@ Route::post('confirm/{id}', 'OrderController@confirm')->name('order.confirm');
 Route::get('signin', 'FrontendController@signin')->name('signinpage');
 Route::get('signup', 'FrontendController@signup')->name('signuppage');
 
+Route::get('signintocheckout', 'FrontendController@signintocheckout')->name('signintocheckout');
+
+
+
 Route::resource('user', 'UserController');
 
 Auth::routes(['register'=>false]);

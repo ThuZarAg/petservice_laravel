@@ -86,6 +86,10 @@ class FrontendController extends Controller
         return view('frontend.signuppage');
 
     }
+    public function signintocheckout($value='')
+    {
+        return view('frontend.signintocheckout');
+    }
 
     
     public function filterService(Request $request)
