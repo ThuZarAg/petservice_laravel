@@ -36,11 +36,10 @@
               @foreach($packages as $row)
               <tr>
                 <td>{{$i++}}</td>
-                
                 <td>{{$row->name}}</td>
-                 <td>{{$row->duration}} </td>
-                  <td>{{$row->price}} MMK Per dog</td>
-                   <td>{{$row->total}}</td>
+                <td>{{$row->duration}} </td>
+                <td>{{$row->price}} MMK Per dog</td>
+                <td>{{$row->total}}</td>
                 <td>
                   <a href="{{route('package.edit',$row->id)}}" class="btn btn-warning">Edit</a>
                   <a href="{{route('package.show',$row->id)}}" class="btn btn-info">Show</a>

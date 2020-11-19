@@ -58,7 +58,14 @@
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Welcome to Mr.Pet !</h2>
           <p class="animate__animated animate__fadeInUp">“We are providing Pet training Services and accessories & food for your pets.”</p>
-          <a href="{{route('signuppage')}}" class="btn-get-started animate__animated animate__fadeInUp">Click for Register</a>
+
+
+          @auth
+          @else
+           <a href="{{route('signuppage')}}" class="btn-get-started animate__animated animate__fadeInUp">Click for Register</a>
+          @endauth
+
+         
         </div>
       </div>
 
@@ -67,7 +74,10 @@
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Nice To Meet You!</h2>
           <p class="animate__animated animate__fadeInUp">“A dog is the only thing on earth that loves you more than he loves himself”</p>
-          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Click for Register</a>
+          @auth
+          @else
+           <a href="{{route('signuppage')}}" class="btn-get-started animate__animated animate__fadeInUp">Click for Register</a>
+          @endauth
         </div>
       </div>
 
@@ -76,7 +86,10 @@
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">We’re here when you need us.</h2>
           <p class="animate__animated animate__fadeInUp">“Dogs are not our whole life, but they make our lives whole.”</p>
-          <a href="{{route('signuppage')}}" class="btn-get-started animate__animated animate__fadeInUp">Click for Register</a>
+          @auth
+          @else
+           <a href="{{route('signuppage')}}" class="btn-get-started animate__animated animate__fadeInUp">Click for Register</a>
+          @endauth
         </div>
       </div>
 
