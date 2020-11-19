@@ -74,7 +74,7 @@
                     <button class="btn btn-success btn-block mainfullbtncolor checkoutbtn"> Check Out 
                     </button>
                   @else
-                    <a href="{{route('signintocheckout')}}" class="btn btn-success btn-block mainfullbtncolor checkoutbtn">
+                    <a href="{{route('signinpage')}}" class="btn btn-success btn-block mainfullbtncolor checkoutbtn">
                     Sign in To Checkout</a>       
                   @endrole
                 </td>
