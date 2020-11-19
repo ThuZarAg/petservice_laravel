@@ -137,7 +137,17 @@
             // console.log(order);
             $.post("{{route('order.store')}}",{order:order,notes:notes},function (response) {
              
-              swal("Good job!", "You clicked the button!", "success");
+             
+              // swal("Good job!", "You clicked the button!", "success");
+
+              swal({
+                    title: "Good job!",
+                    text: "You clicked the button!",
+                    icon: "success",
+                    button: false,
+                    timer: 5000,
+                  });
+
               localStorage.clear();
               location.href="/";
             })

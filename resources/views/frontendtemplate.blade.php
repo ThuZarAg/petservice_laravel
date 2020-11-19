@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -143,6 +144,8 @@
   <script src="{{asset('assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
   <script src="{{asset('assets/vendor/aos/aos.js')}}"></script>
   <script type="text/javascript" src="{{asset('assets/js/custom.js')}}"></script>
+
+  {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script> --}}
 
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
