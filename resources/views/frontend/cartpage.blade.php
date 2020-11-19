@@ -145,12 +145,13 @@
                     title: "Good job!",
                     text: "You clicked the button!",
                     icon: "success",
-                    button: false,
-                    timer: 5000,
+                   
+                  }).then(()=>{
+                    localStorage.clear();
+                    location.href="/";
                   });
 
-              localStorage.clear();
-              location.href="/";
+             
             })
             e.preventDefault();
           }
