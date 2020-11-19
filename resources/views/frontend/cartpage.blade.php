@@ -136,6 +136,7 @@
             let order = localStorage.getItem('itemlist'); // JSON String
             // console.log(order);
             $.post("{{route('order.store')}}",{order:order,notes:notes},function (response) {
+
              
              
               // swal("Good job!", "You clicked the button!", "success");

@@ -67,7 +67,7 @@ class OrderController extends Controller
             $order->items()->attach($row->id,['quantity'=>$row->qty]);
         }
 
-       
+        
     }
 
     /**
