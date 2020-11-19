@@ -136,9 +136,22 @@
             let order = localStorage.getItem('itemlist'); // JSON String
             // console.log(order);
             $.post("{{route('order.store')}}",{order:order,notes:notes},function (response) {
-              alert(response.msg);
-              localStorage.clear();
-              location.href="/";
+
+             
+             
+              // swal("Good job!", "You clicked the button!", "success");
+
+              swal({
+                    title: "Good job!",
+                    text: "You clicked the button!",
+                    icon: "success",
+                   
+                  }).then(()=>{
+                    localStorage.clear();
+                    location.href="/";
+                  });
+
+             
             })
             e.preventDefault();
           }
