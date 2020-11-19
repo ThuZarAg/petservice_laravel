@@ -32,7 +32,7 @@
             </thead>
             <tbody>
               @php $i=1; $total=0; @endphp
-              @foreach($order->items as $item)
+              @foreach($order->items as $item desc)
               <tr>
                 <td>{{$i++}}</td>
                 <td>{{$item->name}}</td>

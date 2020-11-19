@@ -19,7 +19,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $pending_orders = Order::where('status',0)->get();
+        $pending_orders = Order::where('status',0)->orderBy('id','desc')->get();
         $confirmed_orders = Order::where('status',1)->get();
         return view('order.index',compact('pending_orders','confirmed_orders'));
     }
