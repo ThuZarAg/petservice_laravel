@@ -119,12 +119,12 @@
     <!-- Sidebar menu-->
     <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
     <aside class="app-sidebar">
-      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://media.giphy.com/media/ibeV4GQVV8omuoaOuN/source.mov" alt="User Image">
+      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="http://vvntechnologies.com/vvnemp/images/adminlogin.gif" alt="User Image" width="100px" height="100px">
         <div>
           <p class="app-sidebar__user-name">
                   {{ Auth::user()->name }}
           </p>
-          <p class="app-sidebar__user-designation">Frontend Developer</p>
+          
         </div>
       </div>
       <ul class="app-menu">
